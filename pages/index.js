@@ -1,14 +1,11 @@
-import styled from 'styled-components'
+import Menu from '../src/components/commns/Menu'
 
-// const Title = styled.h1`
-//   font-size: 50px;
-//   color: ${({ theme }) => theme.colors.primary};
-// `
-
-function Title(props){
-  return <h1>{props.children}</h1>
-}
 
 export default function Home() {
-  return <Title>My page Ok</Title>
+  
+  return (
+    <div>
+      <Menu />
+    </div>
+  )
 }
