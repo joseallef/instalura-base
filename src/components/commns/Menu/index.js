@@ -1,6 +1,7 @@
 import React from 'react';
-import { Logo } from '../../theme/Logo';
+import { Logo } from '../../../theme/Logo';
 import { MunuWrapper } from './styles/MenuWrapper';
+import { Button } from './../Button/index';
 
 
 const links = [
@@ -20,7 +21,6 @@ const links = [
 
 ]
 
-
 export default function Menu(){
   return (
     <MunuWrapper>
@@ -30,7 +30,7 @@ export default function Menu(){
       <MunuWrapper.CentralSide>
         {links.map((link) => {
             return (
-                <li>
+                <li key={link.url}>
                     <a href={link.url}>
                         {link.texto}
                     </a>
@@ -39,12 +39,12 @@ export default function Menu(){
         })}
       </MunuWrapper.CentralSide>
       <MunuWrapper.RightSide>
-        <button>
+        <Button ghost variant="secondary.main">
             Entrar
-        </button>
-        <button>
+        </Button>
+        <Button variant="primary.main">
             Cadastrar
-        </button>
+        </Button>
       </MunuWrapper.RightSide>
     </MunuWrapper>
   )
