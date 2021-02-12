@@ -1,5 +1,6 @@
 import styled, {css} from 'styled-components';
 import get from 'lodash/get';
+import { TextStyleVariantsMap } from './../../foundation/Text/index';
 
 
 const ButtonGhost = css`
@@ -30,8 +31,10 @@ border-radius: 8px;
 color: white;
 background-color: #D7385E;
 
+${TextStyleVariantsMap.smallestException}
+
 ${function(props){
-    console.log('<Button>', props.variant, props.theme, get(props.theme, `colors.${props.variant}.color`))
+    // console.log('<Button>', props.variant, props.theme, get(props.theme, `colors.${props.variant}.color`))
     if(props.ghost) {
         return ButtonGhost;
     }
