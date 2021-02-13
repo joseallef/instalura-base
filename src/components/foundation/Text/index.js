@@ -4,10 +4,10 @@ import  styled, { css } from 'styled-components';
 
 
 export const TextStyleVariantsMap = {
-    paragraphh1: css`
-        font-size: ${({ theme }) => theme.typographyVariants.paragraphh1.fontSize};
-        font-weight: ${({ theme }) => theme.typographyVariants.paragraphh1.fontWeight};
-        line-height: ${({ theme }) => theme.typographyVariants.paragraphh1.lineHeight}
+    paragraph1: css`
+        font-size: ${({ theme }) => theme.typographyVariants.paragraph1.fontSize};
+        font-weight: ${({ theme }) => theme.typographyVariants.paragraph1.fontWeight};
+        line-height: ${({ theme }) => theme.typographyVariants.paragraph1.lineHeight}
     
     `,
     smallestException: css`
@@ -25,6 +25,7 @@ if(props.variant === 'smallestException'){
             ${function(props){
                 console.log('props', props.variant);
             return TextStyleVariantsMap[props.variant];
+            
         }
 
     }}

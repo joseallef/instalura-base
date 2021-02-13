@@ -1,6 +1,6 @@
 import React from 'react';
 import { Logo } from '../../../theme/Logo';
-import { MunuWrapper } from './styles/MenuWrapper';
+import { MenuWrapper } from './styles/MenuWrapper';
 import { Button } from './../Button/index';
 import Text from './../../foundation/Text';
 
@@ -18,17 +18,15 @@ const links = [
         texto: 'Sobre',
         url:  '/Sobre',
     }
-
-
 ]
 
 export default function Menu(){
   return (
-    <MunuWrapper>
-      <MunuWrapper.LeftSide>
+    <MenuWrapper>
+      <MenuWrapper.LeftSide>
         <Logo />
-      </MunuWrapper.LeftSide>
-      <MunuWrapper.CentralSide>
+      </MenuWrapper.LeftSide>
+      <MenuWrapper.CentralSide>
         {links.map((link) => {
             return (
                 <li key={link.url}>
@@ -38,15 +36,15 @@ export default function Menu(){
                 </li>
             )
         })}
-      </MunuWrapper.CentralSide>
-      <MunuWrapper.RightSide>
+      </MenuWrapper.CentralSide>
+      <MenuWrapper.RightSide>
         <Button ghost variant="secondary.main">
             Entrar
         </Button>
         <Button variant="primary.main">
             Cadastrar
         </Button>
-      </MunuWrapper.RightSide>
-    </MunuWrapper>
+      </MenuWrapper.RightSide>
+    </MenuWrapper>
   )
 }
