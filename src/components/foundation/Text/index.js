@@ -15,6 +15,7 @@ export const TextStyleVariantsMap = {
         font-size: ${({ theme }) => theme.typographyVariants.smallestException.fontSize};
         font-weight: ${({ theme }) => theme.typographyVariants.smallestException.fontWeight};
         line-height: ${({ theme }) => theme.typographyVariants.smallestException.lineHeight};
+        
     `,
 }
 
