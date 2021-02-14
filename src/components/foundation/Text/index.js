@@ -1,7 +1,8 @@
 import React from 'react';
+import get from 'lodash/get';
 import PropTypes from 'prop-types';
-import  styled, { css } from 'styled-components';
-
+import styled, { css } from 'styled-components';
+import {propToStyle} from './../../../theme/utils/propToStyle';
 
 export const TextStyleVariantsMap = {
     paragraph1: css`
@@ -17,26 +18,16 @@ export const TextStyleVariantsMap = {
     `,
 }
 
-
-
 const TextBase = styled.span`
-cursor: pointer;
-if(props.variant === 'smallestException'){
-            ${function(props){
-                console.log('props', props.variant);
-            return TextStyleVariantsMap[props.variant];
-            
-        }
-
-    }}
-
- 
+  ${({ variant }) => TextStyleVariantsMap[variant]}
+  color: ${({ theme, color }) => get(theme, `colors.${color}.color`)};
+  ${propToStyle('textAlign')}
 `;
 
-export default function Text({ tag, variant, children }) {
-
+export default function Text({ tag, variant, children, ...props }) {
+    // console.log(props.textAlign);
     return (
-        <TextBase as={tag} variant={variant}>
+        <TextBase as={tag} variant={variant} {...props}>
             {children}
         </TextBase>
     );
@@ -46,8 +37,7 @@ Text.protoTypes = {
     tag: PropTypes.string.isRequired,
     variant: PropTypes.string.isRequired,
     children: PropTypes.node.isRequired,
-}
- 
+} 
 
 Text.defaultProps = {
     tag: 'span',

@@ -2,6 +2,7 @@ import styled, {css} from 'styled-components';
 import get from 'lodash/get';
 import { TextStyleVariantsMap } from './../../foundation/Text/index';
 import { breakpointsMedia } from '../../../theme/utils/breakpointsMedia';
+import { propToStyle } from './../../../theme/utils/propToStyle';
 
 
 const ButtonGhost = css`
@@ -58,6 +59,7 @@ export const Button = styled.button`
         `,
     })}
 
-
+    ${propToStyle('margin')}
+    ${propToStyle('display')}
 `;
  
