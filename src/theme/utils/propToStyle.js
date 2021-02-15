@@ -6,10 +6,10 @@ export function propToStyle(propName) {
         
         const propValue = props[propName];
 
-        if(typeof propValue === 'string'){
+        if(typeof propValue === 'string' || typeof propValue === 'number'){
             return {
                 [propName]: propValue
-            }            
+            }
         }
         if(typeof propValue === 'object'){
             return breakpointsMedia({
@@ -28,7 +28,6 @@ export function propToStyle(propName) {
                 xl: {
                     [propName]: propValue.xl
                 },
-
             })
         }
     }

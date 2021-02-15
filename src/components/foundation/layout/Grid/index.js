@@ -1,5 +1,6 @@
 import styled, {css} from 'styled-components';
 import { breakpointsMedia } from './../../../../theme/utils/breakpointsMedia';
+import { propToStyle } from './../../../../theme/utils/propToStyle';
 
 
 const Container = styled.div`
@@ -30,6 +31,8 @@ const Container = styled.div`
     max-width: 1222px;
     `,
     })}
+
+    ${propToStyle('marginTop')}
 `;
 
 const Col = styled.div`
@@ -117,6 +120,11 @@ const Col = styled.div`
                 ` : '',
         })
     }}
+
+    ${propToStyle('display')}
+    ${propToStyle('alignItems')}
+    ${propToStyle('justifyContent')}
+    ${propToStyle('flexDirection')}
 `;
 
 const Row = styled.div`

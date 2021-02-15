@@ -1,9 +1,11 @@
+import React from 'react';
 import { ThemeProvider } from 'styled-components'
 import theme from './../src/theme';
 import { GlobalStyle } from './../src/theme/GlobalStyle';
 import Head from 'next/head';
 
 
+// eslint-disable-next-line react/prop-types
 export default function App({ Component, pageProps }) {
   return (
     <>
