@@ -17,11 +17,8 @@ const ModalWrapper = style.div`
   overflow: hidden;
   transition: .3s;
   z-index: 100;
-
-
-
   ${({ isOpen }) => {
-    if(isOpen){
+    if (isOpen) {
       return css`
         opacity: 1;
         pointer-events: all;
@@ -42,7 +39,6 @@ const LockScroll = createGlobalStyle`
   }
 `;
 
-
 // eslint-disable-next-line react/prop-types
 function Modal({ isOpen, onClose, children }) {
   return (
@@ -51,45 +47,43 @@ function Modal({ isOpen, onClose, children }) {
       onClick={(event) => {
         const isSafeArea = event.target.closest('[data-modal-safe-area="true"]');
         // isOpen = false;
-        if(!isSafeArea){
+        if (!isSafeArea) {
           onClose();
         }
       }}
+    >
+      {isOpen && <LockScroll />}
+      <motion.div
+        variants={{
+          open: {
+            x: 0,
+          },
+          closed: {
+            x: '100%',
+          },
+        }}
+
+        animate={isOpen ? 'open' : 'closed'}
+        transition={{
+          duration: 0.5,
+        }}
+        style={{
+          display: 'flex',
+          flex: 1,
+        }}
       >
-        {isOpen && <LockScroll />}
-        <motion.div
-          variants={{
-            open: {
-              x: 0,
-            },
-            closed: {
-              x: '100%',
-            },
-          }}
-
-          animate={isOpen ? 'open' : 'closed'}
-          transition={{
-            duration: 0.5,
-          }}
-          style={{
-            display: 'flex',
-            flex: 1,
-          }}
-        >
-          {children({
-            'data-modal-safe-area': 'true',
-          })}
-        </motion.div>
+        {children({
+          'data-modal-safe-area': 'true',
+        })}
+      </motion.div>
     </ModalWrapper>
-  )
+  );
 }
-
 
 Modal.Proptypes = {
   isOpen: Proptypes.bool.isRequired,
   children: Proptypes.func.isRequired,
   onClose: Proptypes.func.isRequired,
-}
-
+};
 
 export default Modal;

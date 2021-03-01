@@ -1,9 +1,9 @@
-import React  from 'react';
+import React from 'react';
 
-export default function PageSobre(){
-    return (
-        <div>
-            Página Sobre
-        </div>
-    )
+export default function PageSobre() {
+  return (
+    <div>
+      Página Sobre
+    </div>
+  );
 }
