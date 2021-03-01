@@ -5,9 +5,13 @@ import Text from '../src/components/foundation/Text';
 import { Button } from './../src/components/commns/Button/index';
 import { Grid } from './../src/components/foundation/layout/Grid';
 import { Box } from './../src/components/foundation/layout/Box/index';
+import Modal from './../src/components/commns/Modal';
+
 
 
 export default function Home() {
+  const [isModalOpen, setModalState] = React.useState(false);
+
   return (
     <Box 
       flex="1"
@@ -19,6 +23,27 @@ export default function Home() {
       backgroundRepeat="no-repeat"
       backgroundPosition="bottom right"
     >
+
+      {/* {isModalOpen && <Modal />} */}
+
+      <Modal 
+          isOpen={isModalOpen}
+          onClose={() => {
+            setModalState(false);
+          }}
+      >
+       {(propsDoModal) => (
+          <Box
+          backgroundColor="white"
+          {...propsDoModal}
+        >
+          <div>
+            Nosso modal, conteúdo pro modal
+          </div>
+        </Box>
+       )}
+      </Modal>
+      
       <Menu />
       <Grid.Container
       marginTop={{
@@ -69,6 +94,9 @@ export default function Home() {
               }}
               display="block"
               variant="primary.main"
+              onClick={() => {
+                setModalState(!isModalOpen);
+              }}
           >
             Cadastrar
           </Button>

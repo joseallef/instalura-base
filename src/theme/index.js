@@ -49,7 +49,6 @@ export const breakpoints = {
   xl: 1200,
 }
 
-
 export default {
     colors: colors,
     breakpoints,
