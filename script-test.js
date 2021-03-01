@@ -1,6 +1,8 @@
-/* eslint-disable no-undef */
+// eslint-disable-next-line no-undef
 const shell = require('shelljs');
 
-console.log("Ola mundo");
+console.log('Ola mundo');
 
-shell.exec('git diff --name-only branch-script-testes..main');
+const resultado = shell.exec('git diff --name-only branch-script-testes..main', { silent: true })
+
+console.log(resultado);
