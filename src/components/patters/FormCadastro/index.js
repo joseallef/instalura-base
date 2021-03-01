@@ -1,4 +1,7 @@
 import React from 'react';
+import { Lottie } from   '@crello/react-lottie';
+import successAnimation from './../animations/success.json';
+import errorAnimation from  './../animations/error.json';
 import { Button } from '../../commns/Button';
 import TextField from '../../forms/TextField';
 import { Box } from '../../foundation/layout/Box';
@@ -6,28 +9,66 @@ import { Grid } from '../../foundation/layout/Grid';
 import Text from '../../foundation/Text';
 
 
+const formStates = {
+    DEFAULT: 'DEFAULT',
+    LOADING: 'LOADING',
+    DONE: 'DONE',
+    ERROR: 'ERROR',    
+}
+
 function FormContent() {
+    const [isFormSubmited, setIsFormSubmited] = React.useState(false);
+    const [submissionStatus, setSubmissionStatus] = React.useState(formStates.DEFAULT);
+    
     const [userInfo, setUserInfo] = React.useState({
-        usuario: 'allef',
-        email: 'joseallefbs@gmail.com',
+        usuario: 'Allef',
+        nome: 'Jose Allef',
     });
 
     function handleChange(event) {
         const fieldName = event.target.getAttribute('name');
-        console.log("Mudando o valor do input!", fieldName)
         setUserInfo({
             ...userInfo,
             [fieldName]: event.target.value,
         });
     }
 
-    const isFormInvalid = userInfo.usuario.length === 0 || userInfo.email.length === 0;
+    const isFormInvalid = userInfo.usuario.length === 0 || userInfo.nome.length === 0;
 
     return (
         <form onSubmit={(event) => {
             event.preventDefault();
+
+            setIsFormSubmited(true);
+
             console.log("Formulário pronto para cadastrar!");
-            }}        
+            const userDTO = {
+                username: userInfo.usuario,
+                name: userInfo.nome,
+            }
+            fetch('https://instalura-api.vercel.app/api/users', {
+                method: 'POST',
+                headers: {
+                    'Content-type': 'application/json',
+                },
+                body: JSON.stringify(userDTO),
+            })
+            .then((response) => {
+                if(response.ok){
+                    return response.json();
+                }
+
+                throw new Error('Não foi possivel cadastrar o usuário agora :(')
+            })
+            .then((respostaPronta) => {
+                setSubmissionStatus(formStates.DONE);
+                console.log(respostaPronta);
+            })
+            .catch((error) => {
+                setSubmissionStatus(formStates.ERROR);
+                console.error(error);
+            }) 
+            }}
         >
             <Text
                 variant="title"
@@ -46,7 +87,7 @@ function FormContent() {
                 rolando no bairro, complete seu cadastro agora!
             </Text>
             <div>
-                <TextField placeholder="Email" name="email" value={userInfo.email}
+                <TextField placeholder="Nome" name="nome" value={userInfo.nome}
                     onChange={handleChange}
                 />
             </div>
@@ -62,10 +103,36 @@ function FormContent() {
                 
                 Cadastrar
             </Button>
+            {isFormSubmited && submissionStatus === formStates.DONE && (
+            <Box
+                display="flex"
+                justifyContent="center"
+            >
+                <Lottie
+                    width="150px"
+                    height="150px"
+                    config={{ animationData: successAnimation, loop: true, autoplay: true }}
+                />
+                {/* https://lottiefiles.com/43920-success-alert-icon */}
+            </Box>)}
+            {isFormSubmited && submissionStatus === formStates.ERROR && (
+                <Box
+                    display="flex"
+                    justifyContent="center"
+                >
+                <Lottie
+                    width="150px"
+                    height="150px"
+                    config={{ animationData: errorAnimation, loop: true, autoplay: true }}
+                />
+                {/* https://lottiefiles.com/43920-success-alert-icon */}
+                </Box>
+            )}
         </form>
     )
 }
 
+// eslint-disable-next-line react/prop-types
 export default function FormCadastro({ propsDoModal }) {
     return (
       <Grid.Row

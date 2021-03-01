@@ -43,6 +43,7 @@ const LockScroll = createGlobalStyle`
 `;
 
 
+// eslint-disable-next-line react/prop-types
 function Modal({ isOpen, onClose, children }) {
   return (
     <ModalWrapper
