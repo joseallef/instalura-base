@@ -6,11 +6,12 @@ import { Button } from './../src/components/commns/Button/index';
 import { Grid } from './../src/components/foundation/layout/Grid';
 import { Box } from './../src/components/foundation/layout/Box/index';
 import Modal from './../src/components/commns/Modal';
+import FormCadastro from '../src/components/patters/FormCadastro';
 
 
 
 export default function Home() {
-  const [isModalOpen, setModalState] = React.useState(false);
+  const [isModalOpen, setModalState] = React.useState(true);
 
   return (
     <Box 
@@ -33,14 +34,16 @@ export default function Home() {
           }}
       >
        {(propsDoModal) => (
-          <Box
-          backgroundColor="white"
-          {...propsDoModal}
-        >
-          <div>
-            Nosso modal, conteúdo pro modal
-          </div>
-        </Box>
+
+         <FormCadastro propsDoModal={propsDoModal} />
+        //   <Box
+        //   backgroundColor="white"
+        //   {...propsDoModal}
+        // >
+        //   <div>
+        //     Nosso modal, conteúdo pro modal
+        //   </div>
+        // </Box>
        )}
       </Modal>
       
