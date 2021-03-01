@@ -46,9 +46,8 @@ export const Button = styled.button`
     border-radius: ${({ theme }) => theme.borderRadius};
     &:hover,
     &:focus {
-    opacity: .5;
+     opacity: .5;
     }
-
 
     ${breakpointsMedia({
         xs: css`
