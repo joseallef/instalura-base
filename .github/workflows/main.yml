@@ -37,5 +37,8 @@ jobs:
         run: node -v
 
       # Runs a set of commands using the runners shell
-      - name: Roda o Linter!
+      - name: Install de dependencias!
+       run: yarn install
+        - name: Roda o Linter!
+       run: yarn lint
         run: yarn lint
