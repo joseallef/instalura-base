@@ -7,7 +7,7 @@
     "export": "next build && next export",
     "start": "next start",
     "lint": "eslint --ignore-path .gitignore .",
-    "custom-script": "none ./script-test.js"
+    "custom-script": "node ./script-test.js"
   },
   "dependencies": {
     "@crello/react-lottie": "^0.0.11",
