@@ -1,4 +1,3 @@
-import React from 'react';
 import Menu from '../src/components/commns/Menu';
 import Footer from '../src/components/commns/Footer';
 import Text from '../src/components/foundation/Text';
