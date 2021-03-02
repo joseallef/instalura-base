@@ -1,30 +1,28 @@
-import styled, {css} from 'styled-components';
+import styled, { css } from 'styled-components';
 import get from 'lodash/get';
-import { TextStyleVariantsMap } from './../../foundation/Text/index';
+import { TextStyleVariantsMap } from '../../foundation/Text/index';
 import { breakpointsMedia } from '../../../theme/utils/breakpointsMedia';
-import { propToStyle } from './../../../theme/utils/propToStyle';
-
+import { propToStyle } from '../../../theme/utils/propToStyle';
 
 const ButtonGhost = css`
-    color: ${function(props){
-        return get(props.theme, `colors.${props.variant}.color`)
-    }};
+  color: ${function (props) {
+    return get(props.theme, `colors.${props.variant}.color`);
+  }};
     background: transparent;
 `;
 
 const ButtonDefault = css`
-    color: white;
-    background-color: ${function(props){
-        return get(props.theme, `colors.${props.variant}.color`);
-    }};
-    color: ${function(props){
-        return get(props.theme, `colors.${props.variant}.contrastText`)
-    }};
+  color: white;
+    background-color: ${function (props) {
+    return get(props.theme, `colors.${props.variant}.color`);
+  }};
+    color: ${function (props) {
+    return get(props.theme, `colors.${props.variant}.contrastText`);
+  }};
 `;
 
-
 export const Button = styled.button`
-    border: 0;
+  border: 0;
     cursor: pointer;
     padding: 12px 26px;
     font-weight: bold;
@@ -35,13 +33,12 @@ export const Button = styled.button`
 
     ${TextStyleVariantsMap.smallestException}
 
-    ${function(props){
-        // console.log('<Button>', props.variant, props.theme, get(props.theme, `colors.${props.variant}.color`))
-        if(props.ghost) {
-            return ButtonGhost;
-        }
-        return ButtonDefault;
-    }}
+  ${function (props) {
+    if (props.ghost) {
+      return ButtonGhost;
+    }
+    return ButtonDefault;
+  }}
     transition: opacity ${({ theme }) => theme.transition};
     border-radius: ${({ theme }) => theme.borderRadius};
     &:hover,
@@ -50,13 +47,13 @@ export const Button = styled.button`
     }
 
     ${breakpointsMedia({
-        xs: css`
+    xs: css`
         ${TextStyleVariantsMap.smallestException}
         `,
-        md: css`
+    md: css`
         ${TextStyleVariantsMap.paragraph1}
         `,
-    })}
+  })}
 
     &:disabled {
         cursor: not-allowed;
@@ -65,8 +62,6 @@ export const Button = styled.button`
     ${({ fullWidth }) => fullWidth && css`
         width: 100%;
     `};
-
     ${propToStyle('margin')}
     ${propToStyle('display')}
 `;
- 
