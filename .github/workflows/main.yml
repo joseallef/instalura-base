@@ -35,5 +35,5 @@ jobs:
       - name: Install de dependencias
         run: yarn install
       - name: Roda o Linter
-        run: yarn lint     
-          echo test, and deploy your project.
+        run: yarn lint      
+          
