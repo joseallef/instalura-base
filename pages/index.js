@@ -1,4 +1,3 @@
-import React from 'react';
 import Menu from '../src/components/commns/Menu';
 import Footer from '../src/components/commns/Footer';
 import Text from '../src/components/foundation/Text';
@@ -7,7 +6,6 @@ import { Grid } from '../src/components/foundation/layout/Grid';
 import { Box } from '../src/components/foundation/layout/Box/index';
 import Modal from '../src/components/commns/Modal';
 import FormCadastro from '../src/components/patters/FormCadastro';
-
 
 export default function Home() {
   const [isModalOpen, setModalState] = React.useState(false);
