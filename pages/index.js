@@ -8,6 +8,7 @@ import { Box } from '../src/components/foundation/layout/Box/index';
 import Modal from '../src/components/commns/Modal';
 import FormCadastro from '../src/components/patters/FormCadastro';
 
+
 export default function Home() {
   const [isModalOpen, setModalState] = React.useState(false);
 
