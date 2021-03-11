@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 import {propToStyle} from './../../../theme/utils/propToStyle';
 import { breakpointsMedia } from '../../../theme/utils/breakpointsMedia';
+import Link from '../../commns/Link'
 
 export const TextStyleVariantsMap = {
     paragraph1: css`
@@ -46,9 +47,22 @@ const TextBase = styled.span`
 `;
 
 // eslint-disable-next-line react/prop-types
-export default function Text({ tag, variant, children, ...props }) {
+export default function Text({ tag, variant, children, href, ...props }) {
+    if(href) {
+
+        return (
+            <TextBase
+                as={Link}
+                href={href}
+                variant={variant}
+                {...props}
+            >
+                {children}
+            </TextBase>
+        )
+    }
     return (
-        <TextBase as={tag} variant={variant} {...props}>
+        <TextBase as={tag} href={href} variant={variant} {...props}>
             {children}
         </TextBase>
     );
@@ -64,4 +78,5 @@ Text.defaultProps = {
     tag: 'span',
     variant: 'paragrah1',
     children: null,
+    href: '',
 }
