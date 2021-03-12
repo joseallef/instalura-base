@@ -1,9 +1,9 @@
 import React from 'react';
+import propTypes from 'prop-types';
 import { Logo } from '../../../theme/Logo';
 import { MenuWrapper } from './styles/MenuWrapper';
 import { Button } from './../Button/index';
 import Text from './../../foundation/Text';
-
 
 const links = [
     {
@@ -16,11 +16,12 @@ const links = [
     },
     {
         texto: 'Sobre',
-        url:  '/Sobre',
+        url:  '/sobre',
     }
 ]
 
-export default function Menu(){
+// eslint-disable-next-line react/prop-types
+export default function Menu({ onCadastrarClick }){
   return (
     <MenuWrapper>
       <MenuWrapper.LeftSide>
@@ -30,6 +31,11 @@ export default function Menu(){
         {links.map((link) => {
             return (
                 <li key={link.url}>
+                  {/* <NextLink href={link.url}>
+                    <a>
+                      {link.texto}
+                    </a>
+                  </NextLink> */}
                     <Text variant="smallestException" tag="a" href={link.url}>
                         {link.texto}
                     </Text>
@@ -38,13 +44,17 @@ export default function Menu(){
         })}
       </MenuWrapper.CentralSide>
       <MenuWrapper.RightSide>
-        <Button ghost variant="secondary.main">
+        <Button ghost variant="secondary.main" href="/app/login">
             Entrar
         </Button>
-        <Button variant="primary.main">
+        <Button variant="primary.main" onClick={onCadastrarClick}>
             Cadastrar
         </Button>
       </MenuWrapper.RightSide>
     </MenuWrapper>
   )
 }
+
+Menu.propTypes = {
+  onCadastrarClick: propTypes.func.isRequired,
+};
