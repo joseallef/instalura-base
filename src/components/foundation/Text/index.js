@@ -4,13 +4,13 @@ import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 import {propToStyle} from './../../../theme/utils/propToStyle';
 import { breakpointsMedia } from '../../../theme/utils/breakpointsMedia';
-import Link from '../../commns/Link'
+import Link from '../../commns/Link';
 
 export const TextStyleVariantsMap = {
     paragraph1: css`
         font-size: ${({ theme }) => theme.typographyVariants.paragraph1.fontSize};
         font-weight: ${({ theme }) => theme.typographyVariants.paragraph1.fontWeight};
-        line-height: ${({ theme }) => theme.typographyVariants.paragraph1.lineHeight}
+        line-height: ${({ theme }) => theme.typographyVariants.paragraph1.lineHeight};
     
     `,
     smallestException: css`
