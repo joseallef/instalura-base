@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 import Head from 'next/head';
-import PropTypes from 'prop-types';
+import propTypes from 'prop-types';
 
 // eslint-disable-next-line react/prop-types
 export default function SEO({ headTitle }) {
@@ -39,6 +39,6 @@ SEO.defaultProps = {
   headTitle: '',
 };
 
-SEO.PropTypes = {
-  headTitle: PropTypes.string,
+SEO.propTypes = {
+  headTitle: propTypes.string,
 }
