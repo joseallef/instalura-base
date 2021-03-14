@@ -31,14 +31,6 @@ export default function Home() {
       >
         {(propsDoModal) => (
           <FormCadastro propsDoModal={propsDoModal} />
-        //   <Box
-        //   backgroundColor="white"
-        //   {...propsDoModal}
-        // >
-        //   <div>
-        //     Nosso modal, conteúdo pro modal
-        //   </div>
-        // </Box>
         )}
       </Modal>
       <Menu 
