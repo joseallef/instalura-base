@@ -1,5 +1,5 @@
 import React from 'react';
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import NextLink from 'next/link';
 import styled from 'styled-components';
 import get from 'lodash/get';
@@ -30,6 +30,6 @@ export default function Link({ href, children, ...props }){
 }
 
 Link.propTypes = {
-    href: propTypes.string.isRequired,
-    children: propTypes.node.isRequired,
+    href: PropTypes.string.isRequired,
+    children: PropTypes.node.isRequired,
 }
