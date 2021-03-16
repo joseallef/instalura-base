@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 import Text from '../../foundation/Text';
 import { Box } from '../../foundation/layout/Box';
 import { Grid } from '../../foundation/layout/Grid';
-import Menu from '../../commns/Menu';
-import Footer from '../../commns/Footer';
 import Modal from '../../commns/Modal';
 import FormCadastro from '../../patters/FormCadastro';
 
@@ -27,10 +25,6 @@ export default function FAQScreen({ faqCategories }) {
           <FormCadastro propsDoModal={propsDoModal} />
         )}
       </Modal>
-
-      <Menu
-        onCadastrarClick={() => setModalState(true)}
-      />
 
       <Grid.Container style={{ flex: 1 }}>
         <Grid.Row
@@ -100,8 +94,6 @@ export default function FAQScreen({ faqCategories }) {
           }
         </Grid.Row>
       </Grid.Container>
-
-      <Footer />
     </Box>
   );
 }
