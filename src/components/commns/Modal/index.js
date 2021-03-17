@@ -1,9 +1,9 @@
 import React from 'react';
 import Proptypes from 'prop-types';
-import style, { createGlobalStyle, css } from 'styled-components';
+import styled, { createGlobalStyle, css } from 'styled-components';
 import { motion } from 'framer-motion';
 
-const ModalWrapper = style.div`
+const ModalWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -51,7 +51,7 @@ function Modal({ isOpen, onClose, children }) {
           onClose();
         }
       }}
-    >
+    > 
       {isOpen && <LockScroll />}
       <motion.div
         variants={{
@@ -74,6 +74,7 @@ function Modal({ isOpen, onClose, children }) {
       >
         {children({
           'data-modal-safe-area': 'true',
+          onClose,
         })}
       </motion.div>
     </ModalWrapper>

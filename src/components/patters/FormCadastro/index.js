@@ -1,4 +1,5 @@
 import React from 'react';
+import styled from 'styled-components';
 import { Lottie } from   '@crello/react-lottie';
 import successAnimation from './../animations/success.json';
 import errorAnimation from  './../animations/error.json';
@@ -7,6 +8,32 @@ import TextField from '../../forms/TextField';
 import { Box } from '../../foundation/layout/Box';
 import { Grid } from '../../foundation/layout/Grid';
 import Text from '../../foundation/Text';
+
+const IconClose = styled.div`
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  width: 40px;
+  height: 40px;
+  float: right;
+  border-radius: 50%;
+  cursor: pointer;
+  color: #bbb;
+
+`;
+
+const StatusCad = styled.span`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-top: 35px;
+  font-size: 20px;
+`;
 
 const formStates = {
   DEFAULT: 'DEFAULT',
@@ -20,8 +47,8 @@ function FormContent() {
     const [submissionStatus, setSubmissionStatus] = React.useState(formStates.DEFAULT);
     
     const [userInfo, setUserInfo] = React.useState({
-        usuario: 'Allef',
-        nome: 'Jose Allef',
+        usuario: '',
+        nome: '',
     });
 
     function handleChange(event) {
@@ -40,7 +67,6 @@ function FormContent() {
 
             setIsFormSubmited(true);
 
-            console.log("Formulário pronto para cadastrar!");
             const userDTO = {
                 username: userInfo.usuario,
                 name: userInfo.nome,
@@ -61,7 +87,7 @@ function FormContent() {
             })
             .then((respostaPronta) => {
                 setSubmissionStatus(formStates.DONE);
-                console.log(respostaPronta);
+                return respostaPronta;
             })
             .catch((error) => {
                 setSubmissionStatus(formStates.ERROR);
@@ -107,29 +133,32 @@ function FormContent() {
                 display="flex"
                 justifyContent="center"
             >
-                <Lottie
-                    width="150px"
-                    height="150px"
-                    config={{ animationData: successAnimation, loop: true, autoplay: true }}
-                />
+              <StatusCad>Cadastro Realizado com Sucesso</StatusCad>
+              <Lottie
+                  width="150px"
+                  height="150px"
+                  config={{ animationData: successAnimation, loop: false, autoplay: true }}
+              />
                 {/* https://lottiefiles.com/43920-success-alert-icon */}
             </Box>)}
             {isFormSubmited && submissionStatus === formStates.ERROR && (
-                <Box
-                    display="flex"
-                    justifyContent="center"
-                >
+              <Box
+                  display="flex"
+                  justifyContent="center"
+              >
+                <StatusCad>Erro ao Cadastrar</StatusCad>
                 <Lottie
                     width="150px"
                     height="150px"
-                    config={{ animationData: errorAnimation, loop: true, autoplay: true }}
+                    config={{ animationData: errorAnimation, loop: false, autoplay: true }}
                 />
-                {/* https://lottiefiles.com/43920-success-alert-icon */}
-                </Box>
+              {/* https://lottiefiles.com/43920-success-alert-icon */}
+              </Box>
             )}
         </form>
     )
 }
+
 
 // eslint-disable-next-line react/prop-types
 export default function FormCadastro({ propsDoModal }) {
@@ -160,6 +189,17 @@ export default function FormCadastro({ propsDoModal }) {
             // eslint-disable-next-line react/jsx-props-no-spreading
             {...propsDoModal}
           >
+            <IconClose
+              onClick={(event) => {
+                const isSafeArea = event.target.closest('[data-modal-safe-area="true"]');
+                if(isSafeArea){
+                  // eslint-disable-next-line react/prop-types
+                  propsDoModal.onClose();
+                }
+              }}
+            >
+                x
+            </IconClose>
             <FormContent />
           </Box>
         </Grid.Col>
