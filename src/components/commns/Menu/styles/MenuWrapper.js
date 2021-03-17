@@ -28,6 +28,8 @@ export const MenuWrapper = styled.nav`
       max-width: 1222px;
     `,
   })}
+
+  
 `;
 
 MenuWrapper.LeftSide = styled.div`
@@ -61,7 +63,7 @@ MenuWrapper.CentralSide = styled.div`
   border-top: 1px solid #88989E;
   border-bottom: 1px solid #88989E;
   padding: 12px;
-  
+
   ${breakpointsMedia({
     md: css`
       max-width: 332px;
@@ -82,7 +84,7 @@ MenuWrapper.CentralSide = styled.div`
     transition: 200ms ease-in-out;
     ${breakpointsMedia({
     xs: css`
-      ${TextStyleVariantsMap.smallestException}
+        ${TextStyleVariantsMap.smallestException}
     `,
     md: css`
       ${TextStyleVariantsMap.paragraph1}
