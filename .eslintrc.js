@@ -3,8 +3,10 @@ module.exports = {
   "env": {
       "browser": true,
       "es2021": true,
+      "cypress/gloall": true,
   },
   "extends": [
+      "plugin>cypress/recommended",
       "eslint:recommended",
       "plugin:react/recommended"
   ],
