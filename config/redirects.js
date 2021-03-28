@@ -1,8 +1,8 @@
 // eslint-disable-next-line no-undef
 module.exports = [
   {
-    source: '/login',
+    source: '/login/',
     destination: '/app/login/',
     permanent: true,
   },
-];
+  ]
