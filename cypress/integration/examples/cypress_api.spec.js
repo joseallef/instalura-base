@@ -28,6 +28,7 @@ context('Cypress.Commands', () => {
     })
 
     // @ts-ignore TS2339
+    // eslint-disable-next-line no-unused-vars
     cy.get('button').console('info').then(($button) => {
       // subject is still $button
     })
