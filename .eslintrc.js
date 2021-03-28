@@ -3,8 +3,10 @@ module.exports = {
   "env": {
       "browser": true,
       "es2021": true,
+      "cypress/globals": true
   },
   "extends": [
+      "plugin:cypress/recommended",
       "eslint:recommended",
       "plugin:react/recommended"
   ],
@@ -17,9 +19,10 @@ module.exports = {
   },
   "plugins": [
       "react",
+      "cypress"
   ],
   "rules": {
       "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
-      'import/prefer-default-export': 'off',
+      'import/prefer-default-export': 'off'
   },
 };
