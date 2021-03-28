@@ -6,13 +6,11 @@ export default function useForm({ initialValues, onSubmit }) {
       values,
       handleSubmit(event) {
         event.preventDefault();
-        console.log(event)
         onSubmit(values);
       },
       handleChange(event) {
         const fieldName = event.target.getAttribute('name');
         const { value } = event.target;
-        console.log('fieldName', fieldName, value)
         // ???
         setValues(() =>{
           return {
