@@ -38,6 +38,7 @@ export default function LoginForm() {
   const form = useForm({
     initialValues,
     onSubmit: (values) => {
+      form.setIsFormDisabled(true);
       loginService.login({
         // DTO  data transfer objete
         username: values.usuario, // 'joseallef'
@@ -45,6 +46,13 @@ export default function LoginForm() {
       })
         .then(() => {
           router.push('/app/profile');
+        })
+        .catch((error) => {
+          // Desafio : mostrar o erro na tela
+          console.log(error);
+        })
+        .finally(() => {
+          form.setIsFormDisabled(false);
         });
     },
     async validateSchema(values) {

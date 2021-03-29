@@ -50,6 +50,7 @@ export default function useForm({ initialValues, onSubmit, validateSchema }) {
     },
     // Validação do Form
     isFormDisabled,
+    setIsFormDisabled,
     errors,
     touched,
     handleBlur(event) {
