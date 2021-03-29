@@ -2,57 +2,55 @@ import React from 'react';
 import propTypes from 'prop-types';
 import { Logo } from '../../../theme/Logo';
 import { MenuWrapper } from './styles/MenuWrapper';
-import { Button } from './../Button/index';
-import Text from './../../foundation/Text';
+import { Button } from '../Button/index';
+import Text from '../../foundation/Text';
 
 const links = [
-    {
-        texto: 'Home',
-        url:  '/',
-    },
-    {
-        texto: 'Perguntas frequentes',
-        url:  '/faq',
-    },
-    {
-        texto: 'Sobre',
-        url:  '/sobre',
-    }
-]
+  {
+    texto: 'Home',
+    url: '/',
+  },
+  {
+    texto: 'Perguntas frequentes',
+    url: '/faq',
+  },
+  {
+    texto: 'Sobre',
+    url: '/sobre',
+  },
+];
 
 // eslint-disable-next-line react/prop-types
-export default function Menu({ onCadastrarClick }){
+export default function Menu({ onCadastrarClick }) {
   return (
     <MenuWrapper>
       <MenuWrapper.LeftSide>
         <Logo />
       </MenuWrapper.LeftSide>
       <MenuWrapper.CentralSide>
-        {links.map((link) => {
-            return (
-                <li key={link.url}>
-                  {/* <NextLink href={link.url}>
+        {links.map((link) => (
+          <li key={link.url}>
+            {/* <NextLink href={link.url}>
                     <a>
                       {link.texto}
                     </a>
                   </NextLink> */}
-                    <Text variant="smallestException" tag="a" href={link.url}>
-                        {link.texto}
-                    </Text>
-                </li>
-            )
-        })}
+            <Text variant="smallestException" tag="a" href={link.url}>
+              {link.texto}
+            </Text>
+          </li>
+        ))}
       </MenuWrapper.CentralSide>
       <MenuWrapper.RightSide>
         <Button ghost variant="secondary.main" href="/app/login">
-            Entrar
+          Entrar
         </Button>
         <Button variant="primary.main" onClick={onCadastrarClick}>
-            Cadastrar
+          Cadastrar
         </Button>
       </MenuWrapper.RightSide>
     </MenuWrapper>
-  )
+  );
 }
 
 Menu.propTypes = {

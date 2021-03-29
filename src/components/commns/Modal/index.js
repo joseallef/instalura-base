@@ -51,7 +51,7 @@ function Modal({ isOpen, onClose, children }) {
           onClose();
         }
       }}
-    > 
+    >
       {isOpen && <LockScroll />}
       <motion.div
         variants={{
@@ -63,6 +63,7 @@ function Modal({ isOpen, onClose, children }) {
           },
         }}
 
+        // eslint-disable-next-line react/jsx-props-no-multi-spaces
         animate={isOpen ? 'open' : 'closed'}
         transition={{
           duration: 0.5,
@@ -81,7 +82,7 @@ function Modal({ isOpen, onClose, children }) {
   );
 }
 
-Modal.Proptypes = {
+Modal.propTypes = {
   isOpen: Proptypes.bool.isRequired,
   children: Proptypes.func.isRequired,
   onClose: Proptypes.func.isRequired,

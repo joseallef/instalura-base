@@ -31,19 +31,17 @@ const SvgPage = styled.img`
   z-index: 0;
 `;
 
-
 function Page404() {
-
   return (
     <Box
       display="flex"
       flexDirection="column"
       flex="1"
     >
-   <NotFoud>
-      <Span>404 Page Not Found</Span>
-      <SvgPage src="/images/404.svg" alt="Page Not Found" />
-    </NotFoud>
+      <NotFoud>
+        <Span>404 Page Not Found</Span>
+        <SvgPage src="/images/404.svg" alt="Page Not Found" />
+      </NotFoud>
     </Box>
   );
 }
