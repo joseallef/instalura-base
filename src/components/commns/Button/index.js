@@ -1,3 +1,5 @@
+/* eslint-disable func-names */
+/* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
@@ -69,19 +71,18 @@ const ButtonWapper = styled.button`
     ${propToStyle('display')}
 `;
 
-
 export function Button({ href, children, ...props }) {
-  const hasHref = Boolean(href)
+  const hasHref = Boolean(href);
   const tag = hasHref ? Link : 'button';
   return (
-    <ButtonWapper 
+    <ButtonWapper
       as={tag}
       href={href}
       {...props}
     >
       {children}
     </ButtonWapper>
-  )
+  );
 }
 
 Button.defaultProps = {

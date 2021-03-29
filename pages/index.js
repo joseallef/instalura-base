@@ -109,7 +109,7 @@ export default websitePageHOC(HomeScreen, {
 //       backgroundPosition: 'bottom right',
 //     },
 //   },
-// }); 
+// });
 // {
 //   return (
 //     <WebsitePageWrapper

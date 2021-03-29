@@ -36,6 +36,19 @@ const colors = {
       contrastText: '#fff',
     },
   },
+  // Feedback colors
+  error: {
+    main: {
+      color: '#dc3545',
+      contrastText: '#fff',
+    },
+  },
+  success: {
+    main: {
+      color: '#28a745',
+      contrastText: '#fff',
+    },
+  },
   modes: {
     dark: {},
   },
@@ -47,13 +60,13 @@ export const breakpoints = {
   md: 768,
   lg: 992,
   xl: 1200,
-}
+};
 
 export default {
-    colors: colors,
-    breakpoints,
-    typographyVariants,
-    borderRadius: '8px',
-    transition: '200ms ease-in-out',
-    fontFamily: '\'Rubik\', sans-serif',
-  }
+  colors,
+  breakpoints,
+  typographyVariants,
+  borderRadius: '8px',
+  transition: '200ms ease-in-out',
+  fontFamily: '\'Rubik\', sans-serif',
+};

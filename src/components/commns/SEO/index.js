@@ -31,8 +31,8 @@ export default function SEO({ headTitle }) {
       <meta property="twitter:title" content={title} />
       <meta property="twitter:description" content={description} />
       <meta property="twitter:image" content={image} />
-  </Head>
-  )
+    </Head>
+  );
 }
 
 SEO.defaultProps = {
@@ -41,4 +41,4 @@ SEO.defaultProps = {
 
 SEO.propTypes = {
   headTitle: propTypes.string,
-}
+};

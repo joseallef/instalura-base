@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-props-no-spreading */
 /* eslint-disable react/prop-types */
 import React from 'react';
 import PropTypes from 'prop-types';
@@ -7,7 +8,6 @@ import Modal from '../../commns/Modal';
 import { Box } from '../../foundation/layout/Box';
 import FormCadastro from '../../patters/FormCadastro';
 import SEO from '../../commns/SEO';
-
 
 export const WebsitePageContext = React.createContext({
   toggleModalCadastro: () => {},
