@@ -1,5 +1,17 @@
 import React from 'react';
 
+function formatErrors(yupErrorsInner = []) {
+  return yupErrorsInner.reduce((errorObjectAcc, currentError) => {
+    const fieldName = currentError.path;
+    const errorMessage = currentError.message;
+
+    return {
+      ...errorObjectAcc,
+      [fieldName]: errorMessage,
+    };
+  }, {});
+}
+
 export default function useForm({ initialValues, onSubmit, validateSchema }) {
   const [values, setValues] = React.useState(initialValues);
 
@@ -9,27 +21,44 @@ export default function useForm({ initialValues, onSubmit, validateSchema }) {
   });
   const [touched, setTouchedFields] = React.useState({});
 
+  async function validateValues(currenValues) {
+    try {
+      await validateSchema(currenValues);
+      setErros({});
+      setIsFormDisabled(false);
+    } catch (err) {
+      const formatedErros = formatErrors(err.inner);
+
+      setErros(formatedErros);
+
+      setIsFormDisabled(true);
+    }
+  }
   React.useEffect(() => {
-    validateSchema(values)
-      .then(() => {
-        setIsFormDisabled(false);
-        setErros({});
-      })
+    validateValues(values)
       .catch((err) => {
-        const formatedErros = err.inner.reduce((errorObjectAcc, currentError) => {
-          const fieldName = currentError.path;
-          const errorMessage = currentError.message;
-
-          return {
-            ...errorObjectAcc,
-            [fieldName]: errorMessage,
-          };
-        }, {});
-
-        setErros(formatedErros);
-
-        setIsFormDisabled(true);
+        console.log(err);
       });
+    // validateSchema(values)
+    //   .then(() => {
+    //     setIsFormDisabled(false);
+    //     setErros({});
+    //   })
+    // .catch((err) => {
+    //   const formatedErros = err.inner.reduce((errorObjectAcc, currentError) => {
+    //     const fieldName = currentError.path;
+    //     const errorMessage = currentError.message;
+
+    //     return {
+    //       ...errorObjectAcc,
+    //       [fieldName]: errorMessage,
+    //     };
+    //   }, {});
+
+    //   setErros(formatedErros);
+
+    //   setIsFormDisabled(true);
+    // });
   }, [values]);
 
   return {
