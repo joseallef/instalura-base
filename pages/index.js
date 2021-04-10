@@ -97,32 +97,3 @@ export default websitePageHOC(HomeScreen, {
     },
   },
 });
-
-// export default function Home(HomeScreen, {
-//   pageWrapperProps: {
-//     seoProps: {
-//       headTitle: 'Home',
-//     },
-//     pageBoxProps: {
-//       backgroundImage: 'url(/images/bubbles.svg)',
-//       backgroundRepeat: 'no-repeat',
-//       backgroundPosition: 'bottom right',
-//     },
-//   },
-// });
-// {
-//   return (
-//     <WebsitePageWrapper
-//       seoProps={{
-//         headTitle: 'Home',
-//       }}
-//       pageBoxProps={{
-//         backgroundImage: 'url(/images/bubbles.svg)',
-//         backgroundRepeat: 'no-repeat',
-//         backgroundPosition: 'bottom right',
-//       }}
-//     >
-//       <HomeScreen />
-//     </WebsitePageWrapper>
-//   );
-// }
