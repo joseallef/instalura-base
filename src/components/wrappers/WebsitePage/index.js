@@ -1,6 +1,7 @@
 /* eslint-disable react/jsx-props-no-spreading */
 /* eslint-disable react/prop-types */
 import React from 'react';
+import get from 'lodash/get';
 import PropTypes from 'prop-types';
 import Footer from '../../commns/Footer';
 import Menu from '../../commns/Menu';
@@ -9,15 +10,16 @@ import { Box } from '../../foundation/layout/Box';
 import FormCadastro from '../../patters/FormCadastro';
 import SEO from '../../commns/SEO';
 
-export const WebsitePageContext = React.createContext({
-  toggleModalCadastro: () => {},
-});
+import { WebsitePageContext } from './context';
+
+export { WebsitePageContext } from './context';
 
 export default function WebsitePageWrapper({
   children,
   seoProps,
   pageBoxProps,
   menuProps,
+  messages,
 }) {
   const [isModalOpen, setModalState] = React.useState(false);
 
@@ -28,6 +30,7 @@ export default function WebsitePageWrapper({
         toggleModalCadastro: () => {
           setModalState(!isModalOpen);
         },
+        getCMSContent: (cmsKey) => get(messages, cmsKey),
       }}
     >
       <SEO
@@ -68,6 +71,7 @@ WebsitePageWrapper.defaultProps = {
   menuProps: {
     display: true,
   },
+  messages: {},
 };
 
 WebsitePageWrapper.propTypes = {
@@ -83,4 +87,6 @@ WebsitePageWrapper.propTypes = {
     backgroundPosition: PropTypes.string,
   }),
   children: PropTypes.node.isRequired,
+  // eslint-disable-next-line react/forbid-prop-types
+  messages: PropTypes.object,
 };

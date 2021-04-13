@@ -1,6 +1,6 @@
 import { CMSGraphQClient, gql } from '../../../infra/cms/CMSGraphQLClient';
 
-export async function getContent() {
+export async function getContent({ preview }) {
   const query = gql`
     query {
       pageSobre {
@@ -10,7 +10,7 @@ export async function getContent() {
     }
   `;
 
-  const client = CMSGraphQClient();
+  const client = CMSGraphQClient({ preview });
 
   const response = await client.query({ query });
 

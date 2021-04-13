@@ -60,7 +60,7 @@ describe('loginService', () => {
     describe('whe user try to logout and succeed', () => {
       test('remove its token', async () => {
         const destroyCookie = jest.fn();
-        await loginService.logout(destroyCookie);
+        await loginService.logout(null, destroyCookie);
 
         expect(destroyCookie).toHaveBeenCalledWith(null, 'APP_TOKEN'); // que apague o token
       });
