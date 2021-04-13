@@ -19,6 +19,7 @@ export const userService = {
           Authorization: `Bearer ${token}`,
         },
       });
+      // eslint-disable-next-line no-console
       console.log('response ', response);
 
       return {

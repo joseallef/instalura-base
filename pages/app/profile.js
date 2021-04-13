@@ -5,7 +5,8 @@ import { userService } from '../../src/services/user/userService';
 export default function ProfilePage(props) {
   userService.getProfilePage()
     .then((response) => {
-      console.log(response);
+      // eslint-disable-next-line no-console
+      console.log(response, props);
     });
   return (
     <div>
