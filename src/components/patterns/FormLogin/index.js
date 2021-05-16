@@ -1,7 +1,7 @@
 import React from 'react';
 import { useRouter } from 'next/router';
 import * as yup from 'yup';
-import { Button } from '../../commns/Button';
+import { Button } from '../../commons/Button';
 import TextField from '../../forms/TextField';
 import useForm from '../../../infra/forms/useForm';
 import { loginService } from '../../../services/login/loginService';

@@ -11,6 +11,7 @@ export const MenuWrapper = styled.nav`
   margin-top: 18px;
   padding-left: 28px;
   padding-right: 28px;
+  
   ${breakpointsMedia({
     md: css`
       justify-content: flex-start;
@@ -94,7 +95,6 @@ MenuWrapper.CentralSide = styled.div`
     &:focus {
       font-weight: 500;
       color: #070C0E;
-      
     }
   }
 `;

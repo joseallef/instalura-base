@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 import { propToStyle } from '../../../theme/utils/propToStyle';
 import { breakpointsMedia } from '../../../theme/utils/breakpointsMedia';
-import Link from '../../commns/Link';
+import Link from '../../commons/Link';
 import { WebsitePageContext } from '../../wrappers/WebsitePage/context';
 
 export const TextStyleVariantsMap = {

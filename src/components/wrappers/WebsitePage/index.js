@@ -3,12 +3,12 @@
 import React from 'react';
 import get from 'lodash/get';
 import PropTypes from 'prop-types';
-import Footer from '../../commns/Footer';
-import Menu from '../../commns/Menu';
-import Modal from '../../commns/Modal';
+import Footer from '../../commons/Footer';
+import Menu from '../../commons/Menu';
+import Modal from '../../commons/Modal';
 import { Box } from '../../foundation/layout/Box';
-import FormCadastro from '../../patters/FormCadastro';
-import SEO from '../../commns/SEO';
+import FormCadastro from '../../patterns/FormCadastro';
+import SEO from '../../commons/SEO';
 
 import { WebsitePageContext } from './context';
 

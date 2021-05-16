@@ -1,6 +1,6 @@
 import React from 'react';
 import Text from '../src/components/foundation/Text';
-import { Button } from '../src/components/commns/Button/index';
+import { Button } from '../src/components/commons/Button/index';
 import { Grid } from '../src/components/foundation/layout/Grid';
 import { WebsitePageContext } from '../src/components/wrappers/WebsitePage';
 import { Box } from '../src/components/foundation/layout/Box';
@@ -89,11 +89,6 @@ export default websitePageHOC(HomeScreen, {
   pageWrapperProps: {
     seoProps: {
       headTitle: 'Home',
-    },
-    pageBoxProps: {
-      backgroundImage: 'url(/images/bubbles.svg)',
-      backgroundRepeat: 'no-repeat',
-      backgroundPosition: 'bottom right',
     },
   },
 });

@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import AboutScreen, { getContent } from '../src/components/screens/AboutScreen';
 import websitePageHOC from '../src/components/wrappers/WebsitePage/hoc';
 
