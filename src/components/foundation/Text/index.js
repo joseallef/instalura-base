@@ -6,7 +6,8 @@ import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 import { propToStyle } from '../../../theme/utils/propToStyle';
 import { breakpointsMedia } from '../../../theme/utils/breakpointsMedia';
-import Link from '../../commns/Link';
+import Link from '../../commons/Link';
+import { WebsitePageContext } from '../../wrappers/WebsitePage/context';
 
 export const TextStyleVariantsMap = {
   paragraph1: css`
@@ -44,11 +45,20 @@ const TextBase = styled.span`
   
   ${propToStyle('textAlign')}
   ${propToStyle('marginBottom')}
+  ${propToStyle('display')}
+  ${propToStyle('fontWeight')}
+  ${propToStyle('margin')}
 `;
 
 export default function Text({
-  tag, variant, children, href, ...props
+  tag, variant, children, href, cmsKey, ...props
 }) {
+  const websiteContext = React.useContext(WebsitePageContext);
+
+  const componentContent = cmsKey
+    ? websiteContext.getCMSContent(cmsKey)
+    : children;
+
   if (href) {
     return (
       <TextBase
@@ -57,13 +67,13 @@ export default function Text({
         variant={variant}
         {...props}
       >
-        {children}
+        {componentContent}
       </TextBase>
     );
   }
   return (
     <TextBase as={tag} href={href} variant={variant} {...props}>
-      {children}
+      {componentContent}
     </TextBase>
   );
 }
@@ -72,6 +82,7 @@ Text.protoTypes = {
   tag: PropTypes.string,
   variant: PropTypes.string,
   children: PropTypes.node,
+  cmsKey: PropTypes.string,
 };
 
 Text.defaultProps = {
@@ -79,4 +90,5 @@ Text.defaultProps = {
   variant: 'paragrah1',
   children: null,
   href: '',
+  cmsKey: undefined,
 };

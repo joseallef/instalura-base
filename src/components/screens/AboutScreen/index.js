@@ -27,8 +27,9 @@ export default function AboutScreen({ messages }) {
               variant="title"
               tag="h2"
               color="tertiary.main"
+              cmsKey="pageSobre.pageTitle"
             >
-              {messages.pageSobre.pageTitle}
+              {/* {messages.pageSobre.pageTitle} */}
             </Text>
 
             <Box

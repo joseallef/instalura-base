@@ -1,9 +1,9 @@
 import React from 'react';
-import Link from '../../src/components/commns/Link';
+import Link from '../../src/components/commons/Link';
 import { Box } from '../../src/components/foundation/layout/Box';
 import { Grid } from '../../src/components/foundation/layout/Grid';
 import Text from '../../src/components/foundation/Text';
-import LoginForm from '../../src/components/patters/FormLogin';
+import LoginForm from '../../src/components/patterns/FormLogin';
 import { WebsitePageContext } from '../../src/components/wrappers/WebsitePage';
 import websitePageHOC from '../../src/components/wrappers/WebsitePage/hoc';
 import { Logo } from '../../src/theme/Logo';

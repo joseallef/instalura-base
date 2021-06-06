@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import Text from '../../foundation/Text';
 import { Box } from '../../foundation/layout/Box';
 import { Grid } from '../../foundation/layout/Grid';
-import Modal from '../../commns/Modal';
-import FormCadastro from '../../patters/FormCadastro';
+import Modal from '../../commons/Modal';
+import FormCadastro from '../../patterns/FormCadastro';
 
 export default function FAQScreen({ faqCategories }) {
   const [isModalOpen, setModalState] = React.useState(false);
