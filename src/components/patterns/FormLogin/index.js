@@ -46,7 +46,7 @@ export default function LoginForm({ onSubmit }) {
         password: values.senha, // 'senhasegura'
       })
         .then(() => {
-          router.push('/app/profile');
+          router.push('/app/fead');
         })
         .catch((error) => {
           // Desafio : mostrar o erro na tela

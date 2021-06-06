@@ -18,16 +18,16 @@ const ButtonGhost = css`
 
 const ButtonDefault = css`
   color: white;
-    background-color: ${function (props) {
+  background-color: ${function (props) {
     return get(props.theme, `colors.${props.variant}.color`);
   }};
-    color: ${function (props) {
+  color: ${function (props) {
     return get(props.theme, `colors.${props.variant}.contrastText`);
   }};
 `;
 
 const ButtonWapper = styled.button`
-  border: 0;
+    border: 0;
     cursor: pointer;
     padding: 12px 26px;
     font-weight: bold;
@@ -40,6 +40,12 @@ const ButtonWapper = styled.button`
 
   ${function (props) {
     if (props.ghost) {
+      if (props.logged) {
+        return css`
+          padding: 0px;
+          ${ButtonGhost}
+        `;
+      }
       return ButtonGhost;
     }
     return ButtonDefault;
@@ -69,6 +75,7 @@ const ButtonWapper = styled.button`
     `};
     ${propToStyle('margin')}
     ${propToStyle('display')}
+    ${propToStyle('backgroundColor')}
 `;
 
 export function Button({ href, children, ...props }) {

@@ -1,6 +1,6 @@
-<svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="32" height="32" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g filter="url(#filter0_d)">
-<circle cx="28" cy="28" r="16" fill="#FB7B6B"/>
+<circle cx="28" cy="28" r="28" fill="#FB7B6B"/>
 </g>
 <path d="M28 22.3999V33.5999" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M22.3999 28H33.5999" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>

@@ -9,6 +9,10 @@ export const Header = styled.header`
   box-shadow: 0px 5px #F2F2F2;
   position: fixed;
   bottom: 0;
+  border-radius: 24px 24px 0px 0px;
+
+
+  z-index: 2;
   
   ${breakpointsMedia({
     sm: css`
@@ -16,11 +20,13 @@ export const Header = styled.header`
       position: relative;
       width: 100%;
       background: #FFFFFF;
+      border-radius: 0px;
     `,
   })}
 `;
 
 export const MenuWrapperLogged = styled.nav`
+
   font-family: 'Rubik', sans-serif;
   display: flex;
   align-items: center;
@@ -42,6 +48,7 @@ export const MenuWrapperLogged = styled.nav`
 `;
 
 MenuWrapperLogged.LeftSide = styled.div`
+
   margin: 0;
   order: 1;
   padding: 0px; 
@@ -52,8 +59,14 @@ MenuWrapperLogged.LeftSide = styled.div`
   top: 0%;
   text-align: center;
 
+  
+
   ${breakpointsMedia({
+    xs: css`
+      ${({ ImgLogo }) => (ImgLogo === true ? 'opacity: 1' : 'opacity: 0;')}
+    `,
     sm: css`
+      opacity: 1;
       position: relative;
       display: flex;
       align-items: center;
@@ -132,6 +145,8 @@ MenuWrapperLogged.Icon = styled.span`
 
   width: 32px;
   height: 32px;
+
+
 `;
 
 MenuWrapperLogged.Wrapper = styled.div`
@@ -150,7 +165,6 @@ MenuWrapperLogged.Wrapper = styled.div`
 `;
 
 MenuWrapperLogged.IconToggle = styled.div`
-
   ${breakpointsMedia({
     sm: css`
       display: none;

@@ -33,6 +33,8 @@ const Container = styled.div`
   })}
 
     ${propToStyle('marginTop')}
+    ${propToStyle('paddingRight')}
+    ${propToStyle('paddingLeft')}
     ${propToStyle('display')}
     ${propToStyle('flex')}
     ${propToStyle('alignItems')}
@@ -129,6 +131,7 @@ const Col = styled.div`
     ${propToStyle('justifyContent')}
     ${propToStyle('flexDirection')}
     ${propToStyle('paddingRight')}
+    ${propToStyle('paddingLeft')}
 `;
 
 const Row = styled.div`

@@ -20,6 +20,7 @@ function HomeScreen() {
           xs: '32px',
           md: '75px',
         }}
+
       >
         <Grid.Row>
           <Grid.Col
