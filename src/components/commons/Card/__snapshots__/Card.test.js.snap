@@ -1,0 +1,927 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Card /> renders the component 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": .c2 {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.25;
+  font-weight: 500;
+  margin: 15px;
+}
+
+.c14 {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+.c12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+  -webkit-justify-content: left;
+  -ms-flex-pack: left;
+  justify-content: left;
+}
+
+.c13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c15 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.c16 {
+  border: 0;
+  cursor: pointer;
+  padding: 12px 26px;
+  font-weight: bold;
+  opacity: 1;
+  border-radius: 8px;
+  color: white;
+  background-color: #D7385E;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1;
+  padding: 0px;
+  color: #88989E;
+  background: transparent;
+  -webkit-transition: opacity 200ms ease-in-out;
+  transition: opacity 200ms ease-in-out;
+  border-radius: 8px;
+  background-color: #F1F1F1;
+}
+
+.c16:hover,
+.c16:focus {
+  opacity: .5;
+}
+
+.c16:disabled {
+  cursor: not-allowed;
+  opacity: .2;
+}
+
+.c5 {
+  width: 100%;
+  height: 450px;
+}
+
+.c5:hover {
+  opacity: .6;
+  cursor: pointer;
+  fill: #red;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 0px;
+}
+
+.c4:hover {
+  background-image: url("/images/like.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  max-width: 100%;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 10px;
+  padding-left: 10px;
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.c7 span {
+  margin-left: 5px;
+  margin-right: 10px;
+}
+
+.c9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 2px;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  background-image: url("/images/like.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  max-width: 100%;
+}
+
+.c10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100px;
+}
+
+.c11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-order: 3;
+  -ms-flex-order: 3;
+  order: 3;
+  padding-bottom: 15px;
+  padding-left: 30px;
+  padding-right: 30px;
+  width: 100%;
+}
+
+.c0 {
+  position: relative;
+  padding: 0px;
+  left: 0.27%;
+  right: 0.27%;
+  top: 10px;
+  margin-bottom: 50px;
+  max-width: 600px;
+  border-radius: 3px;
+  background: #FFFFFF;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justijy-content: center;
+  -ms-flex-pack: center;
+  justijy-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+}
+
+@media screen and (min-width:0px) {
+  .c16 {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .c16 {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.25;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .c5 {
+    width: 100%;
+    height: 500px;
+  }
+}
+
+@media screen and (min-width:992px) {
+  .c5 {
+    height: 400px;
+  }
+}
+
+@media screen and (min-width:480px) {
+  .c10 {
+    width: 200px;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .c10 {
+    width: 250px;
+  }
+}
+
+@media screen and (min-width:992px) {
+  .c10 {
+    width: 300px;
+  }
+}
+
+<body>
+    <div>
+      <div
+        class="c0"
+      >
+        <div
+          class="c1"
+        >
+          <img
+            alt="Imagem do perfiel"
+            data-src="/images/avatar.svg"
+          />
+          <span
+            class="c2"
+            color="main.color"
+            font-weight="500"
+            href=""
+          >
+            Allef
+          </span>
+          <div
+            class="c3"
+          >
+            <img
+              alt="More Information"
+              data-src="/images/iconMoreLight.svg"
+            />
+          </div>
+        </div>
+        <figure
+          class="c4"
+        >
+          <img
+            alt="Image do post"
+            class="c5"
+            data-src="https://cdn.pixabay.com/photo/2015/06/05/15/02/audi-798530_960_720.jpg"
+          />
+        </figure>
+        <div
+          class="c6"
+        >
+          <div
+            class="c7"
+          >
+            <span
+              class="c8"
+            />
+            <span>
+              0
+            </span>
+          </div>
+          <div
+            class="c7"
+          >
+            <span
+              class="c9"
+            >
+              <img
+                alt="Imagen"
+                data-src="/images/comment.svg"
+              />
+            </span>
+            <span>
+              1.2k
+            </span>
+          </div>
+          <div
+            class="c7"
+          >
+            <span
+              class="c9"
+            >
+              <img
+                alt="Imagen"
+                data-src="/images/send.svg"
+              />
+            </span>
+          </div>
+          <div
+            class="c10"
+          >
+            <span
+              class="c9"
+            >
+              <img
+                alt="Imagen"
+                data-src="/images/bookmark.svg"
+              />
+            </span>
+          </div>
+        </div>
+        <div
+          class="c11"
+        >
+          <div
+            class="c12"
+            display="flex"
+          >
+            <img
+              alt="Nicolas Cage"
+              data-src="/images/avatar.svg"
+            />
+            <img
+              alt="Nicolas Cage"
+              data-src="/images/avatar.svg"
+            />
+            <img
+              alt="Nicolas Cage"
+              data-src="/images/avatar.svg"
+              src="/images/avatar.svg"
+            />
+          </div>
+          <div
+            class="c13"
+            display="flex"
+          >
+            <span
+              class="c14"
+              href=""
+            >
+              new image
+            </span>
+          </div>
+          <div
+            class="c15"
+            display="flex"
+          >
+            <button
+              class="c16"
+            >
+              Mais
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        class="c0"
+      >
+        <div
+          class="c1"
+        >
+          <img
+            alt="Imagem do perfiel"
+            data-src="/images/avatar.svg"
+            src="/images/avatar.svg"
+          />
+          <span
+            class="c2"
+            color="main.color"
+            font-weight="500"
+            href=""
+          >
+            Allef
+          </span>
+          <div
+            class="c3"
+          >
+            <img
+              alt="More Information"
+              data-src="/images/iconMoreLight.svg"
+              src="/images/iconMoreLight.svg"
+            />
+          </div>
+        </div>
+        <figure
+          class="c4"
+        >
+          <img
+            alt="Image do post"
+            class="c5"
+            data-src="https://cdn.pixabay.com/photo/2015/06/05/15/02/audi-798530_960_720.jpg"
+            src="https://cdn.pixabay.com/photo/2015/06/05/15/02/audi-798530_960_720.jpg"
+          />
+        </figure>
+        <div
+          class="c6"
+        >
+          <div
+            class="c7"
+          >
+            <span
+              class="c8"
+            />
+            <span>
+              0
+            </span>
+          </div>
+          <div
+            class="c7"
+          >
+            <span
+              class="c9"
+            >
+              <img
+                alt="Imagen"
+                data-src="/images/comment.svg"
+                src="/images/comment.svg"
+              />
+            </span>
+            <span>
+              1.2k
+            </span>
+          </div>
+          <div
+            class="c7"
+          >
+            <span
+              class="c9"
+            >
+              <img
+                alt="Imagen"
+                data-src="/images/send.svg"
+                src="/images/send.svg"
+              />
+            </span>
+          </div>
+          <div
+            class="c10"
+          >
+            <span
+              class="c9"
+            >
+              <img
+                alt="Imagen"
+                data-src="/images/bookmark.svg"
+                src="/images/bookmark.svg"
+              />
+            </span>
+          </div>
+        </div>
+        <div
+          class="c11"
+        >
+          <div
+            class="c12"
+            display="flex"
+          >
+            <img
+              alt="Nicolas Cage"
+              data-src="/images/avatar.svg"
+              src="/images/avatar.svg"
+            />
+            <img
+              alt="Nicolas Cage"
+              data-src="/images/avatar.svg"
+              src="/images/avatar.svg"
+            />
+            <img
+              alt="Nicolas Cage"
+              data-src="/images/avatar.svg"
+              src="/images/avatar.svg"
+            />
+          </div>
+          <div
+            class="c13"
+            display="flex"
+          >
+            <span
+              class="c14"
+              href=""
+            >
+              new image
+            </span>
+          </div>
+          <div
+            class="c15"
+            display="flex"
+          >
+            <button
+              class="c16"
+            >
+              Mais
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="Card__WrapperCard-sc-1rpg5se-0 gyAaff"
+    >
+      <div
+        class="Card__WrapperHeader-sc-1rpg5se-1 iuvLsw"
+      >
+        <img
+          alt="Imagem do perfiel"
+          data-src="/images/avatar.svg"
+        />
+        <span
+          class="Text__TextBase-a23ul2-0 kmqBiW"
+          color="main.color"
+          font-weight="500"
+          href=""
+        >
+          Allef
+        </span>
+        <div
+          class="Card__IconMoreInformatio-sc-1rpg5se-2 lgqmJT"
+        >
+          <img
+            alt="More Information"
+            data-src="/images/iconMoreLight.svg"
+          />
+        </div>
+      </div>
+      <figure
+        class="style__WrapperImg-b6mhpt-1 gBQOnY"
+      >
+        <img
+          alt="Image do post"
+          class="style__Image-b6mhpt-0 dEzfoW"
+          data-src="https://cdn.pixabay.com/photo/2015/06/05/15/02/audi-798530_960_720.jpg"
+        />
+      </figure>
+      <div
+        class="style__WrapperFooter-b6mhpt-2 gRycnV"
+      >
+        <div
+          class="style__Option-b6mhpt-3 eYwffJ"
+        >
+          <span
+            class="style__IconLike-b6mhpt-5 bbMqJk"
+          />
+          <span>
+            0
+          </span>
+        </div>
+        <div
+          class="style__Option-b6mhpt-3 eYwffJ"
+        >
+          <span
+            class="style__Icon-b6mhpt-4 XhSNi"
+          >
+            <img
+              alt="Imagen"
+              data-src="/images/comment.svg"
+            />
+          </span>
+          <span>
+            1.2k
+          </span>
+        </div>
+        <div
+          class="style__Option-b6mhpt-3 eYwffJ"
+        >
+          <span
+            class="style__Icon-b6mhpt-4 XhSNi"
+          >
+            <img
+              alt="Imagen"
+              data-src="/images/send.svg"
+            />
+          </span>
+        </div>
+        <div
+          class="style__Cont-b6mhpt-6 bgdyLK"
+        >
+          <span
+            class="style__Icon-b6mhpt-4 XhSNi"
+          >
+            <img
+              alt="Imagen"
+              data-src="/images/bookmark.svg"
+            />
+          </span>
+        </div>
+      </div>
+      <div
+        class="style__ContentBottom-b6mhpt-7 dtmEYk"
+      >
+        <div
+          class="Box-sc-1qkzcdv-0 fumfCm"
+          display="flex"
+        >
+          <img
+            alt="Nicolas Cage"
+            data-src="/images/avatar.svg"
+          />
+          <img
+            alt="Nicolas Cage"
+            data-src="/images/avatar.svg"
+          />
+          <img
+            alt="Nicolas Cage"
+            data-src="/images/avatar.svg"
+            src="/images/avatar.svg"
+          />
+        </div>
+        <div
+          class="Box-sc-1qkzcdv-0 fyXYJG"
+          display="flex"
+        >
+          <span
+            class="Text__TextBase-a23ul2-0 gzHZTf"
+            href=""
+          >
+            new image
+          </span>
+        </div>
+        <div
+          class="Box-sc-1qkzcdv-0 hvuDzE"
+          display="flex"
+        >
+          <button
+            class="Button__ButtonWapper-sc-1icb16y-0 eWubGP"
+          >
+            Mais
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      class="Card__WrapperCard-sc-1rpg5se-0 gyAaff"
+    >
+      <div
+        class="Card__WrapperHeader-sc-1rpg5se-1 iuvLsw"
+      >
+        <img
+          alt="Imagem do perfiel"
+          data-src="/images/avatar.svg"
+          src="/images/avatar.svg"
+        />
+        <span
+          class="Text__TextBase-a23ul2-0 kmqBiW"
+          color="main.color"
+          font-weight="500"
+          href=""
+        >
+          Allef
+        </span>
+        <div
+          class="Card__IconMoreInformatio-sc-1rpg5se-2 lgqmJT"
+        >
+          <img
+            alt="More Information"
+            data-src="/images/iconMoreLight.svg"
+            src="/images/iconMoreLight.svg"
+          />
+        </div>
+      </div>
+      <figure
+        class="style__WrapperImg-b6mhpt-1 gBQOnY"
+      >
+        <img
+          alt="Image do post"
+          class="style__Image-b6mhpt-0 dEzfoW"
+          data-src="https://cdn.pixabay.com/photo/2015/06/05/15/02/audi-798530_960_720.jpg"
+          src="https://cdn.pixabay.com/photo/2015/06/05/15/02/audi-798530_960_720.jpg"
+        />
+      </figure>
+      <div
+        class="style__WrapperFooter-b6mhpt-2 gRycnV"
+      >
+        <div
+          class="style__Option-b6mhpt-3 eYwffJ"
+        >
+          <span
+            class="style__IconLike-b6mhpt-5 bbMqJk"
+          />
+          <span>
+            0
+          </span>
+        </div>
+        <div
+          class="style__Option-b6mhpt-3 eYwffJ"
+        >
+          <span
+            class="style__Icon-b6mhpt-4 XhSNi"
+          >
+            <img
+              alt="Imagen"
+              data-src="/images/comment.svg"
+              src="/images/comment.svg"
+            />
+          </span>
+          <span>
+            1.2k
+          </span>
+        </div>
+        <div
+          class="style__Option-b6mhpt-3 eYwffJ"
+        >
+          <span
+            class="style__Icon-b6mhpt-4 XhSNi"
+          >
+            <img
+              alt="Imagen"
+              data-src="/images/send.svg"
+              src="/images/send.svg"
+            />
+          </span>
+        </div>
+        <div
+          class="style__Cont-b6mhpt-6 bgdyLK"
+        >
+          <span
+            class="style__Icon-b6mhpt-4 XhSNi"
+          >
+            <img
+              alt="Imagen"
+              data-src="/images/bookmark.svg"
+              src="/images/bookmark.svg"
+            />
+          </span>
+        </div>
+      </div>
+      <div
+        class="style__ContentBottom-b6mhpt-7 dtmEYk"
+      >
+        <div
+          class="Box-sc-1qkzcdv-0 fumfCm"
+          display="flex"
+        >
+          <img
+            alt="Nicolas Cage"
+            data-src="/images/avatar.svg"
+            src="/images/avatar.svg"
+          />
+          <img
+            alt="Nicolas Cage"
+            data-src="/images/avatar.svg"
+            src="/images/avatar.svg"
+          />
+          <img
+            alt="Nicolas Cage"
+            data-src="/images/avatar.svg"
+            src="/images/avatar.svg"
+          />
+        </div>
+        <div
+          class="Box-sc-1qkzcdv-0 fyXYJG"
+          display="flex"
+        >
+          <span
+            class="Text__TextBase-a23ul2-0 gzHZTf"
+            href=""
+          >
+            new image
+          </span>
+        </div>
+        <div
+          class="Box-sc-1qkzcdv-0 hvuDzE"
+          display="flex"
+        >
+          <button
+            class="Button__ButtonWapper-sc-1icb16y-0 eWubGP"
+          >
+            Mais
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

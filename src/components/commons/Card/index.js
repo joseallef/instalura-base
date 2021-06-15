@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Text from '../../foundation/Text';
 import ImageCard from '../Image/ImageCard';
+import LoadImage from '../../../services/loadImg';
 
 const WrapperCard = styled.div`
   position: relative;
@@ -36,13 +37,14 @@ const IconMoreInformatio = styled.div`
  `;
 
 export default function Card({ post, user }) {
+  LoadImage();
   return (
     <>
       {post.map((infoPost) => (
         // eslint-disable-next-line no-underscore-dangle
         <WrapperCard key={infoPost.data._id}>
           <WrapperHeader>
-            <img src="/images/avatar.svg" alt="Nicolas Cage" />
+            <img data-src="/images/avatar.svg" alt="Imagem do perfiel" />
             <Text
               tag="span"
               variant="paragraph1"
@@ -53,7 +55,7 @@ export default function Card({ post, user }) {
               {user.username}
             </Text>
             <IconMoreInformatio>
-              <img src="/images/iconMoreLight.svg" alt="More Information" />
+              <img data-src="/images/iconMoreLight.svg" alt="More Information" />
             </IconMoreInformatio>
           </WrapperHeader>
           <ImageCard

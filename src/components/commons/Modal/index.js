@@ -2,6 +2,7 @@ import React from 'react';
 import Proptypes from 'prop-types';
 import styled, { createGlobalStyle, css } from 'styled-components';
 import { motion } from 'framer-motion';
+import { MyContext } from '../../patterns/selectionPost';
 
 const ModalWrapper = styled.div`
   display: flex;
@@ -41,6 +42,7 @@ const LockScroll = createGlobalStyle`
 
 // eslint-disable-next-line react/prop-types
 function Modal({ isOpen, onClose, children }) {
+  const { scrImg, setSrcImg } = React.useContext(MyContext);
   return (
     <ModalWrapper
       isOpen={isOpen}
@@ -48,6 +50,7 @@ function Modal({ isOpen, onClose, children }) {
         const isSafeArea = event.target.closest('[data-modal-safe-area="true"]');
         // isOpen = false;
         if (!isSafeArea) {
+          setSrcImg(scrImg);
           onClose();
         }
       }}

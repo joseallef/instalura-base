@@ -1,12 +1,15 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import PropTypes from 'prop-types';
+import LoadImage from '../../../services/loadImg';
 import { Box } from '../../foundation/layout/Box';
 import { Grid } from '../../foundation/layout/Grid';
 import Text from '../../foundation/Text';
+
 import { Content } from './style';
 
 export default function Profile({ postagem, user }) {
+  LoadImage();
   return (
     <Box
       display="flex"
@@ -27,7 +30,7 @@ export default function Profile({ postagem, user }) {
         >
           <Content.WrapperProfile>
             <Content.ProfilePhoto>
-              <img src="https://media.giphy.com/media/bn0zlGb4LOyo8/giphy.gif" alt="Nicolas Cage" />
+              <img data-src="https://media.giphy.com/media/bn0zlGb4LOyo8/giphy.gif" alt="Nicolas Cage" />
             </Content.ProfilePhoto>
             <Grid.Row>
               <Grid.Col
@@ -148,7 +151,7 @@ export default function Profile({ postagem, user }) {
                 key={data.post._id}
               >
                 <Content.Photo>
-                  <img src={data.post.photoUrl} alt="Nicolas Cage" />
+                  <img data-src={data.post.photoUrl} alt="Nicolas Cage" />
                 </Content.Photo>
               </Grid.Col>
             ))}

@@ -55,6 +55,7 @@ export default function MenuLogged({ onClickPost, ImgLogo }) {
                 logged
                 variant="secondary.main"
                 onClick={onClickPost}
+                id="toggleModal"
               >
                 <img alt="Imagen" src="/images/add.svg" />
               </Button>

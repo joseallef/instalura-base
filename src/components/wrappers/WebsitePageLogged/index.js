@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import MenuLogged from '../../commons/Menu/Logged';
-import ModalPost from '../../commons/ModalPost';
+import Modal from '../../commons/Modal';
 import { Box } from '../../foundation/layout/Box';
 import FormPost from '../../patterns/FormPost';
 import { MyContext } from './context';
@@ -26,7 +26,7 @@ export default function WebsitePageLogged({ ImgLogo, children }) {
         ImgLogo={ImgLogo}
       />
       <MyContext.Provider value={{ scrImg, setSrcImg }}>
-        <ModalPost
+        <Modal
           isOpen={stateModal}
           onClose={() => {
             setStateModal(false);
@@ -40,7 +40,7 @@ export default function WebsitePageLogged({ ImgLogo, children }) {
               }}
             />
           )}
-        </ModalPost>
+        </Modal>
         {children}
       </MyContext.Provider>
     </Box>

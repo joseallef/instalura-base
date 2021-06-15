@@ -1,5 +1,5 @@
 import React from 'react';
-import styled, { css } from 'styled-components';
+import styled, { createGlobalStyle, css } from 'styled-components';
 import { MyContext } from '../../patterns/selectionPost';
 
 const ModalWrapper = styled.div`
@@ -31,6 +31,11 @@ const ModalWrapper = styled.div`
   }}
 
 `;
+const LockScroll = createGlobalStyle`
+  body {
+    overflow: hidden;
+  }
+`;
 
 // eslint-disable-next-line react/prop-types
 export default function ModalPost({ isOpen, onClose, children }) {
@@ -47,7 +52,7 @@ export default function ModalPost({ isOpen, onClose, children }) {
         }
       }}
     >
-
+      {isOpen && <LockScroll />}
       {children({
         'data-modal-safe-area': 'true',
       })}

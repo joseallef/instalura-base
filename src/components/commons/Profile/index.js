@@ -56,7 +56,7 @@ export default function Profile() {
         >
           <WrapperProfile>
             <ContentProfile>
-              <img src={`${project.linkRepo}.png`} alt="Nicolas Cage" />
+              <img data-src={`${project.linkRepo}.png`} alt="Nicolas Cage" />
               <Box
                 display="block"
                 marginLeft="20px"
@@ -91,7 +91,7 @@ export default function Profile() {
                 target="_blank"
                 href={project.linkRepo}
               >
-                <img src="/images/github.svg" alt="Mascote Github" />
+                <img data-src="/images/github.svg" alt="Mascote Github" />
                 <span>Github</span>
               </Text>
             </Rep>
