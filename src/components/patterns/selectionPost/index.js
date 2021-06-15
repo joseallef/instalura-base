@@ -68,8 +68,14 @@ export default function SelectionPost({ url }) {
             width: '90%',
           }}
           onClick={() => {
-            userService.post(url, tones);
-            clearDate();
+            if (Object.values(tones).length === 0) {
+              userService.post(url, 'normal');
+              clearDate();
+            } else {
+              userService.post(url, tones);
+              clearDate();
+            }
+            document.location.reload();
           }}
         >
           Postar

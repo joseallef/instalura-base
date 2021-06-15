@@ -6,7 +6,7 @@ import { Box } from '../../../foundation/layout/Box';
 import Text from '../../../foundation/Text';
 import { Button } from '../../Button';
 import {
-  Cont, ContentBottom, Icon, IconLike, Image, Option, WrapperFooter, WrapperImg,
+  Cont, ContentBottom, Icon, IconLike, Option, Image, WrapperFooter, WrapperImg,
 } from './style';
 
 export default function ImageCard({ data }) {
@@ -20,7 +20,7 @@ export default function ImageCard({ data }) {
       >
         <Image
           alt="Image do post"
-          src={data.photoUrl}
+          data-src={data.photoUrl}
           onClick={() => {
             // eslint-disable-next-line no-underscore-dangle
             userService.toggleLike(data._id);
@@ -38,18 +38,18 @@ export default function ImageCard({ data }) {
         </Option>
         <Option>
           <Icon>
-            <img alt="Imagen" src="/images/comment.svg" />
+            <img alt="Imagen" data-src="/images/comment.svg" />
           </Icon>
           <span>1.2k</span>
         </Option>
         <Option>
           <Icon>
-            <img alt="Imagen" src="/images/send.svg" />
+            <img alt="Imagen" data-src="/images/send.svg" />
           </Icon>
         </Option>
         <Cont>
           <Icon>
-            <img alt="Imagen" src="/images/bookmark.svg" />
+            <img alt="Imagen" data-src="/images/bookmark.svg" />
           </Icon>
         </Cont>
       </WrapperFooter>
@@ -58,9 +58,9 @@ export default function ImageCard({ data }) {
           display="flex"
           justifyContent="left"
         >
-          <img src="/images/avatar.svg" alt="Nicolas Cage" />
-          <img src="/images/avatar.svg" alt="Nicolas Cage" />
-          <img src="/images/avatar.svg" alt="Nicolas Cage" />
+          <img data-src="/images/avatar.svg" alt="Nicolas Cage" />
+          <img data-src="/images/avatar.svg" alt="Nicolas Cage" />
+          <img data-src="/images/avatar.svg" alt="Nicolas Cage" />
         </Box>
         <Box
           display="flex"

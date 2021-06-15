@@ -13,7 +13,7 @@ export const Image = styled.img`
   ${breakpointsMedia({
     md: css`  
       width: 100%;
-      height: 500px;   
+      height: 500px;
     `,
     lg: css`
       height: 400px;

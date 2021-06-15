@@ -53,10 +53,14 @@ export default function FormPost({ propsDoModal, onClose }) {
   const isFormValid = urlInfo.url.length < 15;
 
   return (
-    <MyContext.Provider value={{ clearDate, tones, setTone }}>
+    <MyContext.Provider value={{
+      clearDate, tones, setTone,
+    }}
+    >
       <WrapperForm
       // eslint-disable-next-line react/jsx-props-no-spreading
         {...propsDoModal}
+        id="formModal"
       >
         <Section
           onClick={() => {

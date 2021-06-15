@@ -15,8 +15,14 @@ export function FeadPage({ posts, user }) {
     // eslint-disable-next-line no-unused-vars
     .then((response) => {
       // eslint-disable-next-line no-console
-      // console.log(response, props);
+      // console.log('response', response, 'posts', posts);
     });
+  // window.addEventListener('scroll', Scroll);
+
+  // useEffect(() => {
+  //   // window.addEventListener('scroll', Scroll);
+  //   console.log('renderizou', postagem, pathImg);
+  // }, [postagem]);
 
   return (
     <Grid.Container
@@ -42,7 +48,10 @@ export function FeadPage({ posts, user }) {
             lg: 0,
           }}
         >
-          <Card post={pathImg} user={user} />
+          {/* {pathImg.map((card) => {
+            console.log(card.getBoundingClientRect().top < window.innerHeight);
+          })} */}
+          <Card post={pathImg.reverse()} user={user} />
         </Grid.Col>
 
         <Grid.Col
@@ -97,6 +106,27 @@ export async function getServerSideProps(ctx) {
     },
   };
 }
+
+// export async function getServerSideProps(ctx) {
+//   // const auth = authService(ctx);
+
+//   // const session = await auth.getSession();
+//   const profilePage = await userService.getProfilePage(ctx);
+//   return {
+//     props: {
+//       // user: session,
+//       posts: profilePage,
+//     }, // will be passed to the page component as props
+//   };
+
+//   // ctx.res.writeHead(307, { location: '/login' });
+//   // ctx.res.end();
+
+//   // return {
+//   //   props: {
+//   //   },
+//   // };
+// }
 
 FeadPage.propTypes = {
   user: PropTypes.shape({

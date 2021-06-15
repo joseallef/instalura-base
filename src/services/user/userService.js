@@ -33,32 +33,28 @@ export const userService = {
     }
   },
   async post(photoUrl, filter) {
-    if (photoUrl.length < 80) {
-      const url = `${BASE_URL}/api/posts`;
-      const token = await authService(null).getToken();
-      const description = 'new image';
+    const url = `${BASE_URL}/api/posts`;
+    const token = await authService(null).getToken();
+    const description = 'new image';
 
-      const response = await HttpClient(url, {
-        method: 'POST',
-        body: {
-          photoUrl,
-          description,
-          filter,
-        },
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      });
-      console.log('resposta enviada ', response);
-      return {
-        posts: [
-          response,
-        ],
-      };
-    }
-    // eslint-disable-next-line no-alert
-    alert('Url muito grande');
-    return {};
+    const response = await HttpClient(url, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+      method: 'POST',
+      body: {
+        photoUrl,
+        description,
+        filter,
+      },
+
+    });
+    console.log('resposta enviada ', response);
+    return {
+      posts: [
+        response,
+      ],
+    };
   },
 
   async toggleLike(id) {
@@ -66,11 +62,11 @@ export const userService = {
     const token = await authService(null).getToken();
 
     const res = await HttpClient(url, {
-      method: 'POST',
-      body: {},
       headers: {
         Authorization: `Bearer ${token}`,
       },
+      method: 'POST',
+      body: {},
     });
     console.log('deu like', res);
     return {
