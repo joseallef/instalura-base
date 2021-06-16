@@ -30,7 +30,7 @@ export default function Profile({ postagem, user }) {
         >
           <Content.WrapperProfile>
             <Content.ProfilePhoto>
-              <img data-src="https://media.giphy.com/media/bn0zlGb4LOyo8/giphy.gif" alt="Nicolas Cage" />
+              <img data-src="https://avatars.githubusercontent.com/u/46696111?v=4" alt="Nicolas Cage" />
             </Content.ProfilePhoto>
             <Grid.Row>
               <Grid.Col

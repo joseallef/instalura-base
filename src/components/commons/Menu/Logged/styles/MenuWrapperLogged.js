@@ -24,6 +24,13 @@ export const Header = styled.header`
     `,
   })}
 `;
+export const IconBottom = styled.div`
+  img {
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+  }
+`;
 
 export const MenuWrapperLogged = styled.nav`
 

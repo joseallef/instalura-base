@@ -11,7 +11,7 @@ Object {
   margin: 15px;
 }
 
-.c14 {
+.c15 {
   font-size: 16px;
   font-weight: 400;
   line-height: 1.25;
@@ -28,7 +28,7 @@ Object {
   justify-content: left;
 }
 
-.c13 {
+.c14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -39,7 +39,7 @@ Object {
   justify-content: center;
 }
 
-.c15 {
+.c16 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -50,7 +50,7 @@ Object {
   justify-content: flex-end;
 }
 
-.c16 {
+.c17 {
   border: 0;
   cursor: pointer;
   padding: 12px 26px;
@@ -71,12 +71,12 @@ Object {
   background-color: #F1F1F1;
 }
 
-.c16:hover,
-.c16:focus {
+.c17:hover,
+.c17:focus {
   opacity: .5;
 }
 
-.c16:disabled {
+.c17:disabled {
   cursor: not-allowed;
   opacity: .2;
 }
@@ -163,6 +163,19 @@ Object {
   -ms-flex-align: center;
   align-items: center;
   padding: 2px;
+}
+
+.c13 {
+  grid-area: 1 / 3 / auto / img 5;
+  z-index: 1;
+  height: 30px;
+  width: 19px;
+}
+
+.c13 img {
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
 }
 
 .c8 {
@@ -272,7 +285,7 @@ Object {
 }
 
 @media screen and (min-width:0px) {
-  .c16 {
+  .c17 {
     font-size: 12px;
     font-weight: 400;
     line-height: 1;
@@ -280,7 +293,7 @@ Object {
 }
 
 @media screen and (min-width:768px) {
-  .c16 {
+  .c17 {
     font-size: 16px;
     font-weight: 400;
     line-height: 1.25;
@@ -416,37 +429,49 @@ Object {
             class="c12"
             display="flex"
           >
-            <img
-              alt="Nicolas Cage"
-              data-src="/images/avatar.svg"
-            />
-            <img
-              alt="Nicolas Cage"
-              data-src="/images/avatar.svg"
-            />
-            <img
-              alt="Nicolas Cage"
-              data-src="/images/avatar.svg"
-              src="/images/avatar.svg"
-            />
+            <div
+              class="c13"
+            >
+              <img
+                alt="Perfil"
+                data-src="https://avatars.githubusercontent.com/u/46696111?v=4"
+              />
+            </div>
+            <div
+              class="c13"
+            >
+              <img
+                alt="Perfil"
+                data-src="https://avatars.githubusercontent.com/u/46696111?v=4"
+              />
+            </div>
+            <div
+              class="c13"
+            >
+              <img
+                alt="Perfil"
+                data-src="https://avatars.githubusercontent.com/u/46696111?v=4"
+                src="https://avatars.githubusercontent.com/u/46696111?v=4"
+              />
+            </div>
           </div>
           <div
-            class="c13"
+            class="c14"
             display="flex"
           >
             <span
-              class="c14"
+              class="c15"
               href=""
             >
               new image
             </span>
           </div>
           <div
-            class="c15"
+            class="c16"
             display="flex"
           >
             <button
-              class="c16"
+              class="c17"
             >
               Mais
             </button>
@@ -555,39 +580,51 @@ Object {
             class="c12"
             display="flex"
           >
-            <img
-              alt="Nicolas Cage"
-              data-src="/images/avatar.svg"
-              src="/images/avatar.svg"
-            />
-            <img
-              alt="Nicolas Cage"
-              data-src="/images/avatar.svg"
-              src="/images/avatar.svg"
-            />
-            <img
-              alt="Nicolas Cage"
-              data-src="/images/avatar.svg"
-              src="/images/avatar.svg"
-            />
+            <div
+              class="c13"
+            >
+              <img
+                alt="Perfil"
+                data-src="https://avatars.githubusercontent.com/u/46696111?v=4"
+                src="https://avatars.githubusercontent.com/u/46696111?v=4"
+              />
+            </div>
+            <div
+              class="c13"
+            >
+              <img
+                alt="Perfil"
+                data-src="https://avatars.githubusercontent.com/u/46696111?v=4"
+                src="https://avatars.githubusercontent.com/u/46696111?v=4"
+              />
+            </div>
+            <div
+              class="c13"
+            >
+              <img
+                alt="Perfil"
+                data-src="https://avatars.githubusercontent.com/u/46696111?v=4"
+                src="https://avatars.githubusercontent.com/u/46696111?v=4"
+              />
+            </div>
           </div>
           <div
-            class="c13"
+            class="c14"
             display="flex"
           >
             <span
-              class="c14"
+              class="c15"
               href=""
             >
               new image
             </span>
           </div>
           <div
-            class="c15"
+            class="c16"
             display="flex"
           >
             <button
-              class="c16"
+              class="c17"
             >
               Mais
             </button>
@@ -640,7 +677,7 @@ Object {
           class="style__Option-b6mhpt-3 eYwffJ"
         >
           <span
-            class="style__IconLike-b6mhpt-5 bbMqJk"
+            class="style__IconLike-b6mhpt-6 kIHTDr"
           />
           <span>
             0
@@ -674,7 +711,7 @@ Object {
           </span>
         </div>
         <div
-          class="style__Cont-b6mhpt-6 bgdyLK"
+          class="style__Cont-b6mhpt-7 kzWAJn"
         >
           <span
             class="style__Icon-b6mhpt-4 XhSNi"
@@ -687,25 +724,37 @@ Object {
         </div>
       </div>
       <div
-        class="style__ContentBottom-b6mhpt-7 dtmEYk"
+        class="style__ContentBottom-b6mhpt-8 hGxhWn"
       >
         <div
           class="Box-sc-1qkzcdv-0 fumfCm"
           display="flex"
         >
-          <img
-            alt="Nicolas Cage"
-            data-src="/images/avatar.svg"
-          />
-          <img
-            alt="Nicolas Cage"
-            data-src="/images/avatar.svg"
-          />
-          <img
-            alt="Nicolas Cage"
-            data-src="/images/avatar.svg"
-            src="/images/avatar.svg"
-          />
+          <div
+            class="style__IconBottom-b6mhpt-5 hfZVje"
+          >
+            <img
+              alt="Perfil"
+              data-src="https://avatars.githubusercontent.com/u/46696111?v=4"
+            />
+          </div>
+          <div
+            class="style__IconBottom-b6mhpt-5 hfZVje"
+          >
+            <img
+              alt="Perfil"
+              data-src="https://avatars.githubusercontent.com/u/46696111?v=4"
+            />
+          </div>
+          <div
+            class="style__IconBottom-b6mhpt-5 hfZVje"
+          >
+            <img
+              alt="Perfil"
+              data-src="https://avatars.githubusercontent.com/u/46696111?v=4"
+              src="https://avatars.githubusercontent.com/u/46696111?v=4"
+            />
+          </div>
         </div>
         <div
           class="Box-sc-1qkzcdv-0 fyXYJG"
@@ -776,7 +825,7 @@ Object {
           class="style__Option-b6mhpt-3 eYwffJ"
         >
           <span
-            class="style__IconLike-b6mhpt-5 bbMqJk"
+            class="style__IconLike-b6mhpt-6 kIHTDr"
           />
           <span>
             0
@@ -812,7 +861,7 @@ Object {
           </span>
         </div>
         <div
-          class="style__Cont-b6mhpt-6 bgdyLK"
+          class="style__Cont-b6mhpt-7 kzWAJn"
         >
           <span
             class="style__Icon-b6mhpt-4 XhSNi"
@@ -826,27 +875,39 @@ Object {
         </div>
       </div>
       <div
-        class="style__ContentBottom-b6mhpt-7 dtmEYk"
+        class="style__ContentBottom-b6mhpt-8 hGxhWn"
       >
         <div
           class="Box-sc-1qkzcdv-0 fumfCm"
           display="flex"
         >
-          <img
-            alt="Nicolas Cage"
-            data-src="/images/avatar.svg"
-            src="/images/avatar.svg"
-          />
-          <img
-            alt="Nicolas Cage"
-            data-src="/images/avatar.svg"
-            src="/images/avatar.svg"
-          />
-          <img
-            alt="Nicolas Cage"
-            data-src="/images/avatar.svg"
-            src="/images/avatar.svg"
-          />
+          <div
+            class="style__IconBottom-b6mhpt-5 hfZVje"
+          >
+            <img
+              alt="Perfil"
+              data-src="https://avatars.githubusercontent.com/u/46696111?v=4"
+              src="https://avatars.githubusercontent.com/u/46696111?v=4"
+            />
+          </div>
+          <div
+            class="style__IconBottom-b6mhpt-5 hfZVje"
+          >
+            <img
+              alt="Perfil"
+              data-src="https://avatars.githubusercontent.com/u/46696111?v=4"
+              src="https://avatars.githubusercontent.com/u/46696111?v=4"
+            />
+          </div>
+          <div
+            class="style__IconBottom-b6mhpt-5 hfZVje"
+          >
+            <img
+              alt="Perfil"
+              data-src="https://avatars.githubusercontent.com/u/46696111?v=4"
+              src="https://avatars.githubusercontent.com/u/46696111?v=4"
+            />
+          </div>
         </div>
         <div
           class="Box-sc-1qkzcdv-0 fyXYJG"

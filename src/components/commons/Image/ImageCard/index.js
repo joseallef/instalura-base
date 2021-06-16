@@ -6,7 +6,7 @@ import { Box } from '../../../foundation/layout/Box';
 import Text from '../../../foundation/Text';
 import { Button } from '../../Button';
 import {
-  Cont, ContentBottom, Icon, IconLike, Option, Image, WrapperFooter, WrapperImg,
+  Cont, ContentBottom, Icon, IconBottom, IconLike, Option, Image, WrapperFooter, WrapperImg,
 } from './style';
 
 export default function ImageCard({ data }) {
@@ -58,9 +58,15 @@ export default function ImageCard({ data }) {
           display="flex"
           justifyContent="left"
         >
-          <img data-src="/images/avatar.svg" alt="Nicolas Cage" />
-          <img data-src="/images/avatar.svg" alt="Nicolas Cage" />
-          <img data-src="/images/avatar.svg" alt="Nicolas Cage" />
+          <IconBottom>
+            <img data-src="https://avatars.githubusercontent.com/u/46696111?v=4" alt="Perfil" />
+          </IconBottom>
+          <IconBottom>
+            <img data-src="https://avatars.githubusercontent.com/u/46696111?v=4" alt="Perfil" />
+          </IconBottom>
+          <IconBottom>
+            <img data-src="https://avatars.githubusercontent.com/u/46696111?v=4" alt="Perfil" />
+          </IconBottom>
         </Box>
         <Box
           display="flex"
