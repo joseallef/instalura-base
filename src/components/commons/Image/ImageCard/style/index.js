@@ -71,6 +71,18 @@ export const Icon = styled.span`
 
 `;
 
+export const IconBottom = styled.div`
+  grid-area: 1 / 3 / auto / img 5;
+  z-index: 1;
+  height: 30px;
+  width: 19px;
+  img {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+  }
+`;
+
 export const IconLike = styled.span`
   display: flex;
   justify-content: center;

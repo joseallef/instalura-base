@@ -1,5 +1,5 @@
 import React from 'react';
-import { Header, MenuWrapperLogged } from './styles/MenuWrapperLogged';
+import { Header, IconBottom, MenuWrapperLogged } from './styles/MenuWrapperLogged';
 import { Logo } from '../../../../theme/Logo';
 import InputSearch from './TextWrapper';
 import { Button } from '../../Button';
@@ -68,7 +68,9 @@ export default function MenuLogged({ onClickPost, ImgLogo }) {
                 href="/app/profile"
                 ghost
               >
-                <img alt="Imagen" src="/images/avatar.svg" />
+                <IconBottom>
+                  <img alt="Imagen" src="/images/avatar.jpg" />
+                </IconBottom>
               </Button>
             </MenuWrapperLogged.Icon>
           </MenuWrapperLogged.RightSide>

@@ -23,56 +23,64 @@ export const userService = {
         },
       });
       // eslint-disable-next-line no-console
-      // console.log('response ', response);
+      // console.log('response ', data);
 
       return {
         data,
       };
     } catch (err) {
-      throw new Error('Não consegimos pegar os posts');
+      throw new Error(err, 'Não consegimos pegar os posts');
     }
   },
   async post(photoUrl, filter) {
     const url = `${BASE_URL}/api/posts`;
-    const token = await authService(null).getToken();
-    const description = 'new image';
+    try {
+      const token = await authService(null).getToken();
+      const description = 'new image';
 
-    const response = await HttpClient(url, {
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-      method: 'POST',
-      body: {
-        photoUrl,
-        description,
-        filter,
-      },
+      const response = await HttpClient(url, {
+        method: 'POST',
+        body: {
+          photoUrl,
+          description,
+          filter,
+        },
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
 
-    });
-    console.log('resposta enviada ', response);
-    return {
-      posts: [
-        response,
-      ],
-    };
+      });
+      console.log('resposta enviada ', response);
+      return {
+        posts: [
+          response,
+        ],
+      };
+    } catch (err) {
+      throw new Error(err, 'Erro ao cadastrar um novo poste');
+    }
   },
 
   async toggleLike(id) {
     const url = `${BASE_URL}/api/posts/${id}/like`;
-    const token = await authService(null).getToken();
+    try {
+      const token = await authService(null).getToken();
 
-    const res = await HttpClient(url, {
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-      method: 'POST',
-      body: {},
-    });
-    console.log('deu like', res);
-    return {
-      like: [
-        res,
-      ],
-    };
+      const res = await HttpClient(url, {
+        method: 'POST',
+        body: {},
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
+      console.log('deu like', res);
+      return {
+        like: [
+          res,
+        ],
+      };
+    } catch (err) {
+      throw new Error(err, 'Erro no like! ):');
+    }
   },
 };
