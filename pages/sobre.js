@@ -6,8 +6,6 @@ export async function getStaticProps({ preview }) {
   console.log('Next Previel Mode:  preview', preview);
   const messages = await getContent({ preview });
 
-  console.log(messages);
-
   return {
     props: {
       messages,

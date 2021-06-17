@@ -35,6 +35,13 @@ const IconMoreInformatio = styled.div`
   text-align: center;
 
  `;
+export const IconBottom = styled.div`
+  img {
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+  }
+`;
 
 export default function Card({ post, user }) {
   LoadImage();
@@ -44,7 +51,9 @@ export default function Card({ post, user }) {
         // eslint-disable-next-line no-underscore-dangle
         <WrapperCard key={infoPost.data._id}>
           <WrapperHeader>
-            <img data-src="/images/avatar.svg" alt="Imagem do perfiel" />
+            <IconBottom>
+              <img data-src="/images/avatar.jpg" alt="Imagem do perfiel" />
+            </IconBottom>
             <Text
               tag="span"
               variant="paragraph1"
