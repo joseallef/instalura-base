@@ -13,7 +13,14 @@ export function ProfilePage({ user, posts }) {
   );
 }
 
-export default websitePageLoggedHOC(ProfilePage, { propsLogo: false });
+export default websitePageLoggedHOC(ProfilePage, {
+  pageWrapperProps: {
+    propsLogo: true,
+    seoProps: {
+      headTitle: 'Perfil',
+    },
+  },
+});
 
 export async function getServerSideProps(ctx) {
   const auth = authService(ctx);

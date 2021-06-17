@@ -50,7 +50,6 @@ export const userService = {
         },
 
       });
-      console.log('resposta enviada ', response);
       return {
         posts: [
           response,
@@ -73,7 +72,6 @@ export const userService = {
           Authorization: `Bearer ${token}`,
         },
       });
-      console.log('deu like', res);
       return {
         like: [
           res,

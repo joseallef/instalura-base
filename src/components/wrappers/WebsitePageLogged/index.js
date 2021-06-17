@@ -5,8 +5,9 @@ import Modal from '../../commons/Modal';
 import { Box } from '../../foundation/layout/Box';
 import FormPost from '../../patterns/FormPost';
 import { MyContext } from './context';
+import SEO from '../../commons/SEO';
 
-export default function WebsitePageLogged({ ImgLogo, children }) {
+export default function WebsitePageLogged({ ImgLogo, children, seoProps }) {
   const [stateModal, setStateModal] = React.useState(false);
   const [scrImg, setSrcImg] = React.useState({
     url: '/images/notExist.svg',
@@ -19,6 +20,10 @@ export default function WebsitePageLogged({ ImgLogo, children }) {
       margin="0"
       backgroundColor="#F2F2F2"
     >
+      <SEO
+        // eslint-disable-next-line react/jsx-props-no-spreading
+        {...seoProps}
+      />
       <MenuLogged
         onClickPost={() => {
           setStateModal(true);
@@ -50,4 +55,6 @@ export default function WebsitePageLogged({ ImgLogo, children }) {
 WebsitePageLogged.propTypes = {
   ImgLogo: PropTypes.bool.isRequired,
   children: PropTypes.node.isRequired,
+  // eslint-disable-next-line react/forbid-prop-types
+  seoProps: PropTypes.object.isRequired,
 };
