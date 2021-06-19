@@ -15,7 +15,7 @@ export function ProfilePage({ user, posts }) {
 
 export default websitePageLoggedHOC(ProfilePage, {
   pageWrapperProps: {
-    propsLogo: true,
+    propsLogo: false,
     seoProps: {
       headTitle: 'Perfil',
     },
