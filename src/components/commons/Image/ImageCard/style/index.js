@@ -3,7 +3,7 @@ import { breakpointsMedia } from '../../../../../theme/utils/breakpointsMedia';
 
 export const Image = styled.img`
   width: 100%;
-  height: 450px; 
+  height: 450px;
   :hover {
     opacity: .6;
     cursor: pointer;
@@ -89,6 +89,7 @@ export const IconLike = styled.span`
   align-items: center;
   width: 30px;
   height: 30px;
+  cursor: pointer;
   
 
   ${({ isLiked }) => (isLiked

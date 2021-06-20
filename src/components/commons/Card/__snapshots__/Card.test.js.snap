@@ -193,6 +193,7 @@ Object {
   align-items: center;
   width: 30px;
   height: 30px;
+  cursor: pointer;
   background-image: url("/images/like.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -695,7 +696,7 @@ Object {
           class="style__Option-b6mhpt-3 eYwffJ"
         >
           <span
-            class="style__IconLike-b6mhpt-6 kIHTDr"
+            class="style__IconLike-b6mhpt-6 hmGUpj"
           />
           <span>
             0
@@ -847,7 +848,7 @@ Object {
           class="style__Option-b6mhpt-3 eYwffJ"
         >
           <span
-            class="style__IconLike-b6mhpt-6 kIHTDr"
+            class="style__IconLike-b6mhpt-6 hmGUpj"
           />
           <span>
             0

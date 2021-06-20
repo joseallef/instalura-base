@@ -9,7 +9,16 @@ const ContentImg = styled.div`
   opacity: 0.8;
   background: #D5D5D4;
 
+  img {
+    width: 100%;
+    height: 100%;
+  }
+
+
   ${breakpointsMedia({
+    xs: css`
+      height: 500px;
+    `,
     sm: css`
       width: 375px;
       height: 275px;
@@ -18,7 +27,6 @@ const ContentImg = styled.div`
     `,
   })}
   /* tertiaryDarkMain */
-  
   display: flex;
   justify-content: center;
   aling-items: center;
