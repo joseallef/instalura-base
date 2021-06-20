@@ -5,8 +5,9 @@ import LoadImage from '../../../services/loadImg';
 import { Box } from '../../foundation/layout/Box';
 import { Grid } from '../../foundation/layout/Grid';
 import Text from '../../foundation/Text';
-
 import { Content } from './style';
+
+import ImagePostProfile from './ImagePostProfile';
 
 export default function Profile({ postagem, user }) {
   LoadImage();
@@ -150,9 +151,7 @@ export default function Profile({ postagem, user }) {
                 // eslint-disable-next-line no-underscore-dangle
                 key={data.post._id}
               >
-                <Content.Photo>
-                  <img data-src={data.post.photoUrl} alt="Nicolas Cage" />
-                </Content.Photo>
+                <ImagePostProfile postagem={data} />
               </Grid.Col>
             ))}
           </Content.WrapperPhoto>

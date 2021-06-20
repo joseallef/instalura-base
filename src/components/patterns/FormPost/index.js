@@ -30,6 +30,8 @@ export default function FormPost({ propsDoModal, onClose }) {
 
   const [content, setContent] = React.useState(contentPost.INITIAL);
 
+  const isFormValid = urlInfo.url.length < 25;
+
   function handleChange(event) {
     const fieldName = event.target.getAttribute('name');
     setUrlInfo({
@@ -49,8 +51,6 @@ export default function FormPost({ propsDoModal, onClose }) {
     setTone({});
     onClose();
   }
-
-  const isFormValid = urlInfo.url.length < 15;
 
   return (
     <MyContext.Provider value={{

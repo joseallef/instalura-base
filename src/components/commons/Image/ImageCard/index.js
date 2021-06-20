@@ -33,6 +33,11 @@ export default function ImageCard({ data }) {
         <Option>
           <IconLike
             isLiked={like}
+            onClick={() => {
+              // eslint-disable-next-line no-underscore-dangle
+              userService.toggleLike(data._id);
+              setLike(!like);
+            }}
           />
           <span>{like ? 1 : 0}</span>
         </Option>

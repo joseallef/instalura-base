@@ -84,12 +84,22 @@ const Photo = styled.div`
   width: 120px;
   height: 120px;
   margin: 5px;
+  cursor: pointer;
+  
+  :hover {
+    opacity: .6;
+  }
 
   img {
     max-width: 100%;
   }
 
   ${breakpointsMedia({
+    xs: css`
+      img {
+        width: 400px;
+      }
+    `,
     sm: css`
       width: 140px;
       height: 140px;
@@ -97,6 +107,10 @@ const Photo = styled.div`
     md: css`
       width: 200px;
       height: 200px;
+      
+      img {
+        width: 400px;
+      }
     `,
     lg: css`
       width: 220px;
