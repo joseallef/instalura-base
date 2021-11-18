@@ -1,4 +1,10 @@
-# Example app with styled-components
+<h1 align="center">
+  Project Instalura  
+ </h1>
+
+#### Home
+![home](https://user-images.githubusercontent.com/46696111/142500622-519353ff-aee5-4ea7-9337-4374a97c22df.png)
+
 
 This example features how you use a different styling solution than [styled-jsx](https://github.com/zeit/styled-jsx) that also supports universal styles. That means we can serve the required styles for the first render within the HTML and then load the rest in the client. In this case we are using [styled-components](https://github.com/styled-components/styled-components).
 
