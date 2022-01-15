@@ -14,6 +14,14 @@
 
 #### ProfileArea
 ![areaLoggedProfile](https://user-images.githubusercontent.com/46696111/142501985-a75cabba-319f-4468-8a5f-cfa5d9089d96.png)
+<br>
+
+
+**Projeto criado durante o bootcamp JAMStack da Alura sendo o maior dos desafios, tendo como intuito criar um clone do instagran
+seguindo as melhores praticas de desacoplamento, reutilização de componentes, testes de unidade e integração**
+
+
+<br>
 
 **Clone o repositório**
 
