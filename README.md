@@ -15,6 +15,10 @@
 #### ProfileArea
 ![areaLoggedProfile](https://user-images.githubusercontent.com/46696111/142501985-a75cabba-319f-4468-8a5f-cfa5d9089d96.png)
 
+
+## Descrição
+  Projeto desenvolvido durante o bootcamp Jamstack da Alura, onde foi utilizado Next.js como framework, GraphQL, styled-components e Lottie, implementado autenticação   com jwt e autorização, SEO, desacoplamento do código, CI/CD, testes de unidade e integração.
+
 **Clone o repositório**
 
 ```bach
